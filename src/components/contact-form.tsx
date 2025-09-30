@@ -33,14 +33,11 @@ export function ContactForm({ className }: ContactFormProps) {
     register,
     handleSubmit,
     formState: { errors },
-    reset,
-    watch
+    reset
   } = useForm<ContactFormData>({
     resolver: zodResolver(contactSchema),
     mode: "onChange"
   })
-
-  const watchedFields = watch()
 
   const onSubmit = async (data: ContactFormData) => {
     setIsSubmitting(true)
@@ -244,7 +241,7 @@ export function ContactForm({ className }: ContactFormProps) {
                 <CheckCircle className="w-5 h-5" />
                 <div>
                   <p className="font-medium">Message sent successfully!</p>
-                  <p className="text-sm opacity-90">We'll get back to you within 24 hours.</p>
+                  <p className="text-sm opacity-90">We&apos;ll get back to you within 24 hours.</p>
                 </div>
               </div>
             </motion.div>

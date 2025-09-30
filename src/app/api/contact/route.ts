@@ -79,7 +79,7 @@ export async function POST(request: NextRequest) {
     `
 
     // Send email to your business email
-    const { data, error } = await resend.emails.send({
+    const { error } = await resend.emails.send({
       from: "Contact Form <contact@sonarium.ai>",
       to: ["nicolas@sonarium.ai"],
       subject: `New Contact: ${name} from ${company}`,

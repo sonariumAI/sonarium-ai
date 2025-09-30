@@ -49,7 +49,7 @@ export function ContactSection() {
         <FadeIn>
           <SectionTitle>Ready to Transform Your LLMs?</SectionTitle>
           <SectionDescription className="mx-auto max-w-3xl">
-            Let's discuss how Sonarium AI can help you move from prototype to production.
+            Let&apos;s discuss how Sonarium AI can help you move from prototype to production.
             Book a free 90-minute audit or send us a message to get started.
           </SectionDescription>
         </FadeIn>
@@ -67,7 +67,7 @@ export function ContactSection() {
                     Send us a message
                   </h3>
                   <p className="text-muted-foreground text-sm">
-                    Tell us about your LLM project and we'll get back to you within 2 business hours.
+                    Tell us about your LLM project and we&apos;ll get back to you within 2 business hours.
                   </p>
                 </div>
                 <ContactForm />
