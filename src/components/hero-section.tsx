@@ -16,12 +16,12 @@ export function HeroSection() {
     <AnimatedBackground className="min-h-screen flex items-center justify-center pt-16">
       <motion.div
         style={{ y, opacity }}
-        className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20"
+        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20"
       >
         <div className="text-center max-w-4xl mx-auto">
           {/* Main Headline */}
           <FadeIn delay={0.2}>
-            <h1 className="text-6xl sm:text-7xl lg:text-8xl xl:text-9xl font-bold text-white mb-6 leading-tight">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-6 leading-tight">
             Your LLMs Work in{" "}
             <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
               Demos

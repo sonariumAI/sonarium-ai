@@ -16,11 +16,21 @@ export function FadeIn({
   direction = "up",
   className
 }: FadeInProps) {
+  const [isMounted, setIsMounted] = React.useState(false)
+
+  React.useEffect(() => {
+    setIsMounted(true)
+  }, [])
+
   const directionOffset = {
     up: { y: 60 },
     down: { y: -60 },
     left: { x: 60 },
     right: { x: -60 }
+  }
+
+  if (!isMounted) {
+    return <div className={className}>{children}</div>
   }
 
   return (
@@ -30,7 +40,7 @@ export function FadeIn({
         opacity: 0,
         ...directionOffset[direction]
       }}
-      whileInView={{
+      animate={{
         opacity: 1,
         x: 0,
         y: 0
@@ -39,10 +49,6 @@ export function FadeIn({
         duration: 0.8,
         delay,
         ease: [0.25, 0.46, 0.45, 0.94]
-      }}
-      viewport={{
-        once: true,
-        margin: "-10%"
       }}
     >
       {children}
