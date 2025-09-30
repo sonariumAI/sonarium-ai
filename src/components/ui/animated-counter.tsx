@@ -4,7 +4,7 @@ import * as React from "react"
 import { motion, useSpring, useTransform } from "framer-motion"
 import { cn } from "@/lib/utils"
 
-interface AnimatedCounterProps extends React.HTMLAttributes<HTMLSpanElement> {
+interface AnimatedCounterProps {
   value: number
   duration?: number
   decimals?: number
@@ -12,6 +12,7 @@ interface AnimatedCounterProps extends React.HTMLAttributes<HTMLSpanElement> {
   suffix?: string
   separator?: string
   trigger?: boolean
+  className?: string
 }
 
 const AnimatedCounter = React.forwardRef<HTMLSpanElement, AnimatedCounterProps>(
@@ -23,8 +24,7 @@ const AnimatedCounter = React.forwardRef<HTMLSpanElement, AnimatedCounterProps>(
     prefix = "",
     suffix = "",
     separator = ",",
-    trigger = true,
-    ...props
+    trigger = true
   }, ref) => {
     const [displayValue, setDisplayValue] = React.useState(0)
     const [isAnimating, setIsAnimating] = React.useState(false)
@@ -111,7 +111,6 @@ const AnimatedCounter = React.forwardRef<HTMLSpanElement, AnimatedCounterProps>(
         initial={{ scale: 0.8, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.2 }}
-        {...props}
       >
         {formatNumber(displayValue)}
       </motion.span>
