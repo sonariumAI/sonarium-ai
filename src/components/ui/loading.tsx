@@ -86,14 +86,14 @@ export function LoadingDots({
   )
 }
 
-interface SkeletonProps extends React.HTMLAttributes<HTMLDivElement> {
+interface SkeletonProps {
   variant?: "text" | "circular" | "rectangular"
+  className?: string
 }
 
 export function Skeleton({
   className,
-  variant = "rectangular",
-  ...props
+  variant = "rectangular"
 }: SkeletonProps) {
   const variantClasses = {
     text: "h-4 rounded",
@@ -115,7 +115,6 @@ export function Skeleton({
         repeat: Infinity,
         ease: "easeInOut"
       }}
-      {...props}
     />
   )
 }
