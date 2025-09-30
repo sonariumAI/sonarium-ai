@@ -7,8 +7,8 @@ const GA_TRACKING_ID = process.env.NEXT_PUBLIC_GA_ID
 // Extend Window interface for gtag
 declare global {
   interface Window {
-    gtag?: (command: string, ...args: any[]) => void
-    dataLayer?: any[]
+    gtag?: (command: string, ...args: unknown[]) => void
+    dataLayer?: Record<string, unknown>[]
   }
 }
 
