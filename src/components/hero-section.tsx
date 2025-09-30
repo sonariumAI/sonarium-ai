@@ -13,15 +13,15 @@ export function HeroSection() {
   const opacity = useTransform(scrollY, [0, 300], [1, 0])
 
   return (
-    <AnimatedBackground className="min-h-screen flex items-center pt-16">
+    <AnimatedBackground className="min-h-screen flex items-center justify-center pt-16">
       <motion.div
         style={{ y, opacity }}
-        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20"
+        className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20"
       >
         <div className="text-center max-w-4xl mx-auto">
           {/* Main Headline */}
           <FadeIn delay={0.2}>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-6 leading-tight">
+            <h1 className="text-6xl sm:text-7xl lg:text-8xl xl:text-9xl font-bold text-white mb-6 leading-tight">
             Your LLMs Work in{" "}
             <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
               Demos
@@ -84,26 +84,25 @@ export function HeroSection() {
           {/* Trust Indicators */}
           <FadeIn delay={1.0}>
             <div className="mt-16 pt-8 border-t border-white/10">
-            <p className="text-sm text-gray-400 mb-6">
-              Trusted by AI teams at leading companies
-            </p>
-            <div className="flex items-center justify-center space-x-8 opacity-50">
-              {/* Placeholder for company logos */}
-              <div className="w-24 h-12 bg-white/5 rounded border border-white/10 flex items-center justify-center">
-                <span className="text-xs text-gray-400">Logo</span>
-              </div>
-              <div className="w-24 h-12 bg-white/5 rounded border border-white/10 flex items-center justify-center">
-                <span className="text-xs text-gray-400">Logo</span>
-              </div>
-              <div className="w-24 h-12 bg-white/5 rounded border border-white/10 flex items-center justify-center">
-                <span className="text-xs text-gray-400">Logo</span>
-              </div>
-              <div className="w-24 h-12 bg-white/5 rounded border border-white/10 flex items-center justify-center">
-                <span className="text-xs text-gray-400">Logo</span>
+              <p className="text-sm text-gray-400 mb-6">
+                Trusted by AI teams at leading companies
+              </p>
+              <div className="flex items-center justify-center space-x-8 opacity-50">
+                {/* Placeholder for company logos */}
+                <div className="w-24 h-12 bg-white/5 rounded border border-white/10 flex items-center justify-center">
+                  <span className="text-xs text-gray-400">Logo</span>
+                </div>
+                <div className="w-24 h-12 bg-white/5 rounded border border-white/10 flex items-center justify-center">
+                  <span className="text-xs text-gray-400">Logo</span>
+                </div>
+                <div className="w-24 h-12 bg-white/5 rounded border border-white/10 flex items-center justify-center">
+                  <span className="text-xs text-gray-400">Logo</span>
+                </div>
+                <div className="w-24 h-12 bg-white/5 rounded border border-white/10 flex items-center justify-center">
+                  <span className="text-xs text-gray-400">Logo</span>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
           </FadeIn>
         </div>
       </motion.div>
