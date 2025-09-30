@@ -4,6 +4,14 @@ import Script from "next/script"
 
 const GA_TRACKING_ID = process.env.NEXT_PUBLIC_GA_ID
 
+// Extend Window interface for gtag
+declare global {
+  interface Window {
+    gtag?: (command: string, ...args: any[]) => void
+    dataLayer?: any[]
+  }
+}
+
 export function Analytics() {
   return (
     <>
