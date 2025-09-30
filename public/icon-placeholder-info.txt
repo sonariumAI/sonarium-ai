@@ -1,0 +1,31 @@
+SONARIUM AI ICON PLACEHOLDERS NEEDED:
+
+The following files need to be created with the Sonarium AI logo/icon:
+
+1. /icon-192.png (192x192px) - PWA icon
+2. /icon-512.png (512x512px) - PWA icon
+3. /apple-touch-icon.png (180x180px) - iOS icon
+4. /og-image.png (1200x630px) - Open Graph image for social sharing
+5. /screenshot-wide.png (1280x720px) - PWA screenshot
+6. /screenshot-narrow.png (540x960px) - PWA mobile screenshot
+
+DESIGN SUGGESTIONS:
+- Primary color: #3b82f6 (blue)
+- Secondary color: #06b6d4 (cyan)
+- Background: #0a0a0a (dark)
+- Icon should represent AI/ML/production themes
+- Consider geometric shapes, neural network patterns, or abstract tech symbols
+- Ensure good contrast for all sizes
+- Use SVG icon above as base design reference
+
+CURRENT STATUS:
+- favicon.ico: Created (placeholder)
+- icon.svg: Created (vector template)
+- manifest.json: Created and configured
+- Meta tags: Configured to reference these files
+
+NEXT STEPS:
+1. Design actual icon/logo in design tool
+2. Export in required sizes and formats
+3. Replace placeholder files
+4. Test icons across devices and platforms
