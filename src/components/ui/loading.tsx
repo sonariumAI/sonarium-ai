@@ -3,6 +3,8 @@
 import * as React from "react"
 import { cn } from "@/lib/utils"
 
+// Loading components without framer-motion for better type compatibility
+
 interface LoadingSpinnerProps extends React.HTMLAttributes<HTMLDivElement> {
   size?: "sm" | "md" | "lg"
   variant?: "primary" | "secondary" | "muted"
