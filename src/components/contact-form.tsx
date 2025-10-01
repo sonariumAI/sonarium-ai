@@ -81,7 +81,7 @@ export function ContactForm({ className }: ContactFormProps) {
 
   return (
     <div className={cn("w-full max-w-2xl mx-auto", className)}>
-      <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+      <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 sm:space-y-6">
         {/* Name Field */}
         <motion.div variants={inputVariants} className="space-y-2">
           <label htmlFor="name" className="text-sm font-medium text-foreground flex items-center space-x-2">
@@ -212,7 +212,7 @@ export function ContactForm({ className }: ContactFormProps) {
             type="submit"
             size="lg"
             disabled={isSubmitting}
-            className="w-full bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-white shadow-lg hover:shadow-xl transition-all duration-300"
+            className="w-full bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-white shadow-lg hover:shadow-xl transition-all duration-300 min-h-[48px]"
           >
             {isSubmitting ? (
               <>

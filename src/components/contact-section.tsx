@@ -56,14 +56,14 @@ export function ContactSection() {
       </SectionHeader>
 
       <SectionContent>
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-12">
 
           {/* Contact Form */}
           <div className="lg:col-span-2">
             <FadeIn delay={0.2}>
-              <Card className="p-8 bg-card/50 backdrop-blur-sm border-border/50">
-                <div className="mb-6">
-                  <h3 className="text-xl font-semibold text-foreground mb-2">
+              <Card className="p-4 sm:p-6 lg:p-8 bg-card/50 backdrop-blur-sm border-border/50">
+                <div className="mb-4 sm:mb-6">
+                  <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-2">
                     Send us a message
                   </h3>
                   <p className="text-muted-foreground text-sm">
@@ -76,7 +76,7 @@ export function ContactSection() {
           </div>
 
           {/* Contact Info & Stats */}
-          <div className="space-y-6">
+          <div className="space-y-4 sm:space-y-6">
 
             {/* Contact Methods */}
             <FadeIn delay={0.4}>

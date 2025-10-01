@@ -8,16 +8,16 @@ const sectionVariants = cva(
   {
     variants: {
       size: {
-        sm: "py-8 px-4",
-        default: "py-16 px-4",
-        lg: "py-24 px-4",
-        xl: "py-32 px-4",
+        sm: "py-6 sm:py-8 px-4 sm:px-6",
+        default: "py-12 sm:py-16 px-4 sm:px-6",
+        lg: "py-16 sm:py-20 lg:py-24 px-4 sm:px-6",
+        xl: "py-20 sm:py-24 lg:py-32 px-4 sm:px-6",
       },
       width: {
         full: "w-full",
-        container: "max-w-7xl mx-auto",
-        narrow: "max-w-4xl mx-auto",
-        tight: "max-w-2xl mx-auto",
+        container: "max-w-7xl mx-auto w-full",
+        narrow: "max-w-4xl mx-auto w-full",
+        tight: "max-w-2xl mx-auto w-full",
       },
       variant: {
         default: "",
@@ -59,7 +59,7 @@ const SectionHeader = React.forwardRef<
   <div
     ref={ref}
     className={cn(
-      "mb-12",
+      "mb-8 sm:mb-10 lg:mb-12",
       center && "text-center",
       className
     )}
@@ -78,7 +78,7 @@ const SectionTitle = React.forwardRef<
   <Comp
     ref={ref}
     className={cn(
-      "text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl",
+      "text-2xl font-bold tracking-tight sm:text-3xl md:text-4xl lg:text-5xl",
       gradient && "bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent",
       className
     )}
@@ -94,7 +94,7 @@ const SectionDescription = React.forwardRef<
   <p
     ref={ref}
     className={cn(
-      "mt-4 text-lg text-muted-foreground max-w-2xl",
+      "mt-3 sm:mt-4 text-base sm:text-lg text-muted-foreground max-w-2xl",
       className
     )}
     {...props}
@@ -108,7 +108,7 @@ const SectionContent = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <div
     ref={ref}
-    className={cn("mt-8", className)}
+    className={cn("mt-6 sm:mt-8", className)}
     {...props}
   />
 ))

@@ -13,15 +13,15 @@ export function HeroSection() {
   const opacity = useTransform(scrollY, [0, 300], [1, 0])
 
   return (
-    <AnimatedBackground className="min-h-screen flex items-center justify-center pt-16">
+    <AnimatedBackground className="min-h-screen flex items-center justify-center pt-16 px-4">
       <motion.div
         style={{ y, opacity }}
-        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20"
+        className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20"
       >
         <div className="text-center max-w-4xl mx-auto">
           {/* Main Headline */}
           <FadeIn delay={0.2}>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-6 leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 sm:mb-6 leading-tight px-2">
             Your LLMs Work in{" "}
             <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
               Demos
@@ -37,7 +37,7 @@ export function HeroSection() {
 
           {/* Subheading */}
           <FadeIn delay={0.4}>
-            <p className="text-xl sm:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed px-2">
             Transform your Large Language Models from promising prototypes to
             enterprise-ready solutions with comprehensive{" "}
             <span className="text-primary font-semibold">evaluation</span>,{" "}
@@ -48,10 +48,10 @@ export function HeroSection() {
 
           {/* Founder Credibility */}
           <FadeIn delay={0.6}>
-            <div className="flex items-center justify-center space-x-3 mb-12">
-            <div className="flex items-center space-x-2 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full px-4 py-2">
-              <CheckCircle className="w-5 h-5 text-primary" />
-              <span className="text-sm text-gray-300">
+            <div className="flex items-center justify-center mb-8 sm:mb-12 px-4">
+            <div className="flex items-center space-x-2 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full px-3 sm:px-4 py-2">
+              <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0" />
+              <span className="text-xs sm:text-sm text-gray-300">
                 Founded by{" "}
                 <span className="text-white font-semibold">Nicolas Debaene</span>,
                 former AI research lead at top tech companies
@@ -62,10 +62,10 @@ export function HeroSection() {
 
           {/* CTA Buttons */}
           <FadeIn delay={0.8}>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center px-4">
             <Button
               size="lg"
-              className="group bg-primary hover:bg-primary/90 text-white shadow-lg hover:shadow-primary/25 transition-all duration-300"
+              className="group bg-primary hover:bg-primary/90 text-white shadow-lg hover:shadow-primary/25 transition-all duration-300 w-full sm:w-auto min-h-[48px]"
             >
               Start Your Evaluation
               <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
@@ -74,7 +74,7 @@ export function HeroSection() {
             <Button
               size="lg"
               variant="outline"
-              className="border-white/20 text-white hover:bg-white/10 hover:border-white/30 backdrop-blur-sm transition-all duration-300"
+              className="border-white/20 text-white hover:bg-white/10 hover:border-white/30 backdrop-blur-sm transition-all duration-300 w-full sm:w-auto min-h-[48px]"
             >
               See Our Approach
             </Button>
@@ -83,22 +83,22 @@ export function HeroSection() {
 
           {/* Trust Indicators */}
           <FadeIn delay={1.0}>
-            <div className="mt-16 pt-8 border-t border-white/10">
-              <p className="text-sm text-gray-400 mb-6">
+            <div className="mt-12 sm:mt-16 pt-6 sm:pt-8 border-t border-white/10">
+              <p className="text-xs sm:text-sm text-gray-400 mb-4 sm:mb-6">
                 Trusted by AI teams at leading companies
               </p>
-              <div className="flex items-center justify-center space-x-8 opacity-50">
+              <div className="flex items-center justify-center gap-4 sm:gap-6 md:gap-8 opacity-50 flex-wrap px-4">
                 {/* Placeholder for company logos */}
-                <div className="w-24 h-12 bg-white/5 rounded border border-white/10 flex items-center justify-center">
+                <div className="w-20 h-10 sm:w-24 sm:h-12 bg-white/5 rounded border border-white/10 flex items-center justify-center">
                   <span className="text-xs text-gray-400">Logo</span>
                 </div>
-                <div className="w-24 h-12 bg-white/5 rounded border border-white/10 flex items-center justify-center">
+                <div className="w-20 h-10 sm:w-24 sm:h-12 bg-white/5 rounded border border-white/10 flex items-center justify-center">
                   <span className="text-xs text-gray-400">Logo</span>
                 </div>
-                <div className="w-24 h-12 bg-white/5 rounded border border-white/10 flex items-center justify-center">
+                <div className="w-20 h-10 sm:w-24 sm:h-12 bg-white/5 rounded border border-white/10 flex items-center justify-center hidden sm:flex">
                   <span className="text-xs text-gray-400">Logo</span>
                 </div>
-                <div className="w-24 h-12 bg-white/5 rounded border border-white/10 flex items-center justify-center">
+                <div className="w-20 h-10 sm:w-24 sm:h-12 bg-white/5 rounded border border-white/10 flex items-center justify-center hidden sm:flex">
                   <span className="text-xs text-gray-400">Logo</span>
                 </div>
               </div>
