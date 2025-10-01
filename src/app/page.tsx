@@ -39,7 +39,7 @@ const ContactSection = dynamic(() => import("@/components/contact-section").then
 
 export default function Home() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen overflow-x-hidden w-full">
       {/* Hero Section */}
       <HeroSection />
 
@@ -92,7 +92,7 @@ export default function Home() {
           </SectionDescription>
         </SectionHeader>
         <SectionContent>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
             <Card variant="elevated">
               <CardHeader>
                 <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">

@@ -13,7 +13,7 @@ export function HeroSection() {
   const opacity = useTransform(scrollY, [0, 300], [1, 0])
 
   return (
-    <AnimatedBackground className="min-h-screen flex items-center justify-center pt-16 px-4">
+    <AnimatedBackground className="min-h-screen flex items-center justify-center pt-16">
       <motion.div
         style={{ y, opacity }}
         className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20"
