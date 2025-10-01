@@ -102,19 +102,12 @@ export function Skeleton({
   }
 
   return (
-    <motion.div
+    <div
       className={cn(
         "bg-muted animate-pulse",
         variantClasses[variant],
         className
       )}
-      initial={{ opacity: 0.6 }}
-      animate={{ opacity: [0.6, 1, 0.6] }}
-      transition={{
-        duration: 1.5,
-        repeat: Infinity,
-        ease: "easeInOut"
-      }}
     />
   )
 }
