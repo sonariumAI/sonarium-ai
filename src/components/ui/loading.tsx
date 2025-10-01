@@ -1,7 +1,6 @@
 "use client"
 
 import * as React from "react"
-import { motion } from "framer-motion"
 import { cn } from "@/lib/utils"
 
 interface LoadingSpinnerProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -64,21 +63,14 @@ export function LoadingDots({
       {...props}
     >
       {[0, 1, 2].map((index) => (
-        <motion.div
+        <div
           key={index}
           className={cn(
-            "w-2 h-2 rounded-full",
+            "w-2 h-2 rounded-full animate-pulse",
             variantClasses[variant]
           )}
-          animate={{
-            scale: [1, 1.2, 1],
-            opacity: [0.7, 1, 0.7]
-          }}
-          transition={{
-            duration: 1.4,
-            repeat: Infinity,
-            delay: index * 0.2,
-            ease: "easeInOut"
+          style={{
+            animationDelay: `${index * 0.2}s`
           }}
         />
       ))}
