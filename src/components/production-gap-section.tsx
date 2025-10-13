@@ -41,11 +41,11 @@ export function ProductionGapSection() {
       <FadeIn>
         <SectionHeader center>
           <SectionTitle className="text-white">
-            The Production Gap
+            The Challenge of Production-Ready AI
           </SectionTitle>
           <SectionDescription className="mx-auto text-gray-300">
-            Despite promising demos, most LLMs struggle when deployed in real-world production environments.
-            Here&apos;s what enterprises are facing today.
+            Building reliable AI systems for production is complex—whether you're starting from scratch or scaling existing models.
+            Here are the critical challenges enterprises face.
           </SectionDescription>
         </SectionHeader>
       </FadeIn>

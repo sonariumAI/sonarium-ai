@@ -16,18 +16,14 @@ export function FounderSection() {
           <div className="grid md:grid-cols-2 gap-8 p-8">
             {/* Left Column - Headshot */}
             <div className="flex flex-col items-center space-y-6">
-              {/* Professional Headshot Placeholder */}
+              {/* Professional Headshot */}
               <div className="relative">
                 <div className="w-48 h-48 rounded-full bg-gradient-to-br from-primary/20 to-secondary/20 border-4 border-primary/20 flex items-center justify-center overflow-hidden">
-                  {/* Placeholder for actual photo */}
-                  <div className="text-6xl font-bold text-primary/40">ND</div>
-
-                  {/* Optional: You can replace this with an actual image */}
-                  {/* <img
+                  <img
                     src="/nicolas-debaene-headshot.jpg"
                     alt="Nicolas Debaene"
                     className="w-full h-full object-cover"
-                  /> */}
+                  />
                 </div>
 
                 {/* Decorative ring */}
@@ -55,7 +51,7 @@ export function FounderSection() {
                 asChild
               >
                 <a
-                  href="https://linkedin.com/in/nicolas-debaene"
+                  href="https://www.linkedin.com/in/nicolas-debaene-58462210a/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

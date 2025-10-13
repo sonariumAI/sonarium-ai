@@ -21,15 +21,7 @@ const MetricsDashboardSection = dynamic(() => import("@/components/metrics-dashb
   loading: () => <div className="h-96 animate-pulse bg-muted/10 rounded-lg" />
 });
 
-const CaseStudySection = dynamic(() => import("@/components/case-study-section").then(mod => ({ default: mod.CaseStudySection })), {
-  loading: () => <div className="h-96 animate-pulse bg-muted/10 rounded-lg" />
-});
-
 const FounderSection = dynamic(() => import("@/components/founder-section").then(mod => ({ default: mod.FounderSection })), {
-  loading: () => <div className="h-96 animate-pulse bg-muted/10 rounded-lg" />
-});
-
-const PreFooterCtaSection = dynamic(() => import("@/components/pre-footer-cta-section").then(mod => ({ default: mod.PreFooterCtaSection })), {
   loading: () => <div className="h-96 animate-pulse bg-muted/10 rounded-lg" />
 });
 
@@ -48,89 +40,38 @@ export default function Home() {
         <ProductionGapSection />
       </LazySection>
 
-      {/* Four Pillars Section */}
-      <LazySection>
-        <FourPillarsSection />
-      </LazySection>
+      {/* Solutions - Four Pillars Section */}
+      <div id="solutions">
+        <LazySection>
+          <FourPillarsSection />
+        </LazySection>
+      </div>
 
-      {/* Timeline Section */}
-      <LazySection>
-        <TimelineSection />
-      </LazySection>
+      {/* Process - Timeline Section */}
+      <div id="process">
+        <LazySection>
+          <TimelineSection />
+        </LazySection>
+      </div>
 
       {/* Metrics Dashboard Section */}
       <LazySection>
         <MetricsDashboardSection />
       </LazySection>
 
-      {/* Case Study Section */}
-      <LazySection>
-        <CaseStudySection />
-      </LazySection>
-
-      {/* Founder Section */}
-      <LazySection>
-        <FounderSection />
-      </LazySection>
+      {/* Team - Founder Section */}
+      <div id="team">
+        <LazySection>
+          <FounderSection />
+        </LazySection>
+      </div>
 
       {/* Contact Section */}
-      <LazySection>
-        <ContactSection />
-      </LazySection>
-
-      {/* Pre-footer CTA Section */}
-      <LazySection>
-        <PreFooterCtaSection />
-      </LazySection>
-
-      {/* Features Section */}
-      <Section size="lg" width="container">
-        <SectionHeader center>
-          <SectionTitle>Why Choose Sonarium AI</SectionTitle>
-          <SectionDescription className="mx-auto">
-            Enterprise-grade solutions for LLM evaluation, deployment, and governance
-          </SectionDescription>
-        </SectionHeader>
-        <SectionContent>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-            <Card variant="elevated">
-              <CardHeader>
-                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                  <div className="w-6 h-6 rounded bg-primary"></div>
-                </div>
-                <CardTitle className="text-xl">Comprehensive Evaluation</CardTitle>
-                <CardDescription>
-                  Advanced testing frameworks to ensure your LLMs perform reliably across diverse real-world scenarios.
-                </CardDescription>
-              </CardHeader>
-            </Card>
-
-            <Card variant="elevated">
-              <CardHeader>
-                <div className="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center mb-4">
-                  <div className="w-6 h-6 rounded bg-secondary"></div>
-                </div>
-                <CardTitle className="text-xl">Production Deployment</CardTitle>
-                <CardDescription>
-                  Seamless deployment pipelines with monitoring, scaling, and optimization for enterprise environments.
-                </CardDescription>
-              </CardHeader>
-            </Card>
-
-            <Card variant="elevated">
-              <CardHeader>
-                <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center mb-4">
-                  <div className="w-6 h-6 rounded bg-accent"></div>
-                </div>
-                <CardTitle className="text-xl">AI Governance</CardTitle>
-                <CardDescription>
-                  Complete governance frameworks ensuring compliance, security, and ethical AI practices.
-                </CardDescription>
-              </CardHeader>
-            </Card>
-          </div>
-        </SectionContent>
-      </Section>
+      <div id="contact">
+        <LazySection>
+          <ContactSection />
+        </LazySection>
+      </div>
     </div>
   );
 }

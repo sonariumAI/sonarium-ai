@@ -5,7 +5,7 @@ import { Section, SectionHeader, SectionTitle, SectionDescription, SectionConten
 import { ContactForm } from "@/components/contact-form"
 import { FadeIn } from "@/components/ui/fade-in"
 import { Card } from "@/components/ui/card"
-import { Mail, Calendar, MapPin, Clock, Users, Zap } from "lucide-react"
+import { Mail, Calendar } from "lucide-react"
 
 export function ContactSection() {
   const contactInfo = [
@@ -25,24 +25,6 @@ export function ContactSection() {
     }
   ]
 
-  const stats = [
-    {
-      icon: Clock,
-      value: "< 2 hours",
-      label: "Response time"
-    },
-    {
-      icon: Users,
-      value: "50+",
-      label: "Enterprise clients"
-    },
-    {
-      icon: Zap,
-      value: "99.9%",
-      label: "Success rate"
-    }
-  ]
-
   return (
     <Section size="lg" width="container" className="bg-gradient-to-b from-background to-card/30">
       <SectionHeader center>
@@ -56,129 +38,52 @@ export function ContactSection() {
       </SectionHeader>
 
       <SectionContent>
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-12">
-
-          {/* Contact Form */}
-          <div className="lg:col-span-2">
-            <FadeIn delay={0.2}>
-              <Card className="p-4 sm:p-6 lg:p-8 bg-card/50 backdrop-blur-sm border-border/50">
-                <div className="mb-4 sm:mb-6">
-                  <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-2">
-                    Send us a message
-                  </h3>
-                  <p className="text-muted-foreground text-sm">
-                    Tell us about your LLM project and we&apos;ll get back to you within 2 business hours.
-                  </p>
-                </div>
-                <ContactForm />
-              </Card>
-            </FadeIn>
-          </div>
-
-          {/* Contact Info & Stats */}
-          <div className="space-y-4 sm:space-y-6">
-
-            {/* Contact Methods */}
-            <FadeIn delay={0.4}>
-              <div className="space-y-4">
-                <h3 className="text-lg font-semibold text-foreground mb-4">
+        <div className="max-w-4xl mx-auto">
+          <FadeIn delay={0.2}>
+            <Card className="p-6 sm:p-8 lg:p-10 bg-card/50 backdrop-blur-sm border-border/50">
+              <div className="mb-8">
+                <h3 className="text-xl font-semibold text-foreground mb-2">
                   Get in Touch
                 </h3>
-                {contactInfo.map((item, index) => (
-                  <Card
-                    key={index}
-                    className="p-4 bg-card/30 border-border/30 hover:bg-card/50 transition-all duration-200 hover:scale-[1.02]"
-                  >
+                <p className="text-muted-foreground text-sm">
+                  Tell us about your project and we&apos;ll get back to you within 2 business hours.
+                </p>
+              </div>
+
+              {/* Contact Form */}
+              <ContactForm />
+
+              {/* Contact Methods - Below form */}
+              <div className="mt-8 pt-8 border-t border-border/50">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {contactInfo.map((item, index) => (
                     <a
+                      key={index}
                       href={item.href}
-                      className="flex items-start space-x-3 group"
+                      className="flex items-center space-x-3 p-4 rounded-lg bg-card/30 border border-border/30 hover:bg-card/50 hover:border-primary/30 transition-all duration-200 group"
                     >
-                      <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                      <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors flex-shrink-0">
                         <item.icon className="w-5 h-5 text-primary" />
                       </div>
                       <div className="flex-1 min-w-0">
-                        <h4 className="font-medium text-foreground group-hover:text-primary transition-colors">
+                        <h4 className="font-medium text-foreground text-sm mb-1">
                           {item.title}
                         </h4>
-                        <p className="text-xs text-muted-foreground mb-1">
-                          {item.description}
-                        </p>
-                        <p className="text-sm text-foreground font-medium">
+                        <p className="text-xs text-muted-foreground">
                           {item.value}
                         </p>
                       </div>
                     </a>
-                  </Card>
-                ))}
-              </div>
-            </FadeIn>
-
-            {/* Stats */}
-            <FadeIn delay={0.6}>
-              <div className="space-y-4">
-                <h3 className="text-lg font-semibold text-foreground mb-4">
-                  Why Choose Us
-                </h3>
-                <div className="grid grid-cols-1 gap-3">
-                  {stats.map((stat, index) => (
-                    <div
-                      key={index}
-                      className="flex items-center space-x-3 p-3 rounded-lg bg-gradient-to-r from-primary/5 to-secondary/5 border border-primary/10"
-                    >
-                      <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
-                        <stat.icon className="w-4 h-4 text-primary" />
-                      </div>
-                      <div>
-                        <div className="text-lg font-bold text-foreground">
-                          {stat.value}
-                        </div>
-                        <div className="text-xs text-muted-foreground">
-                          {stat.label}
-                        </div>
-                      </div>
-                    </div>
                   ))}
                 </div>
               </div>
-            </FadeIn>
 
-            {/* Office Info */}
-            <FadeIn delay={0.8}>
-              <Card className="p-4 bg-card/30 border-border/30">
-                <div className="flex items-start space-x-3">
-                  <div className="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center">
-                    <MapPin className="w-5 h-5 text-secondary" />
-                  </div>
-                  <div>
-                    <h4 className="font-medium text-foreground mb-1">
-                      Global Reach
-                    </h4>
-                    <p className="text-sm text-muted-foreground">
-                      Serving enterprise clients worldwide with remote-first expertise
-                    </p>
-                  </div>
-                </div>
-              </Card>
-            </FadeIn>
-
-            {/* Call to Action */}
-            <FadeIn delay={1.0}>
-              <div className="p-4 rounded-lg bg-gradient-to-r from-primary/10 via-secondary/10 to-primary/10 border border-primary/20">
-                <h4 className="font-semibold text-foreground mb-2">
-                  Ready for a Free Audit?
-                </h4>
-                <p className="text-sm text-muted-foreground mb-3">
-                  Get a comprehensive 90-minute assessment of your LLM production readiness.
-                </p>
-                <a
-                  href="mailto:nicolas@sonarium.ai?subject=Free%20Production%20Readiness%20Audit"
-                  className="text-sm font-medium text-primary hover:text-primary/80 transition-colors"
-                >
-                  Schedule your audit →
-                </a>
-              </div>
-            </FadeIn>
-          </div>
+              {/* Privacy notice */}
+              <p className="text-xs text-muted-foreground/70 text-center mt-6">
+                Your information is secure and will only be used to respond to your inquiry.
+              </p>
+            </Card>
+          </FadeIn>
         </div>
       </SectionContent>
     </Section>

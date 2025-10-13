@@ -21,51 +21,51 @@ export function AnimatedBackground({
       )}
       {...props}
     >
-      {/* Animated gradient background */}
+      {/* Animated gradient background - Dark Galileo style */}
       <div
         className={cn(
-          "absolute inset-0 bg-gradient-to-br opacity-80",
-          variant === "default" && "from-background via-gray-900/90 to-primary/20",
-          variant === "subtle" && "from-background via-gray-900/95 to-primary/10",
-          variant === "bold" && "from-background via-primary/30 to-secondary/20"
+          "absolute inset-0 bg-gradient-to-br",
+          variant === "default" && "from-navy-900 via-navy-800 to-navy-700",
+          variant === "subtle" && "from-background via-navy-800 to-navy-700",
+          variant === "bold" && "from-navy-800 via-navy-700 to-primary/10"
         )}
         style={{
           backgroundSize: "400% 400%",
-          animation: "gradientShift 15s ease infinite"
+          animation: "gradientShift 25s ease infinite"
         }}
       />
 
-      {/* Floating orbs */}
+      {/* Floating orbs - Dark theme */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div
-          className="absolute top-1/4 -left-20 sm:left-1/4 w-48 sm:w-72 h-48 sm:h-72 bg-primary/5 rounded-full blur-3xl"
+          className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-primary/10 rounded-full blur-3xl"
           style={{
-            animation: "float 20s ease-in-out infinite"
+            animation: "float 25s ease-in-out infinite"
           }}
         />
         <div
-          className="absolute top-3/4 -right-20 sm:right-1/4 w-64 sm:w-96 h-64 sm:h-96 bg-secondary/5 rounded-full blur-3xl"
+          className="absolute top-2/3 right-1/4 w-[700px] h-[700px] bg-secondary/8 rounded-full blur-3xl"
           style={{
-            animation: "float 25s ease-in-out infinite reverse"
+            animation: "float 30s ease-in-out infinite reverse"
           }}
         />
         <div
-          className="absolute bottom-1/4 left-1/3 w-48 sm:w-64 h-48 sm:h-64 bg-primary/3 rounded-full blur-3xl hidden sm:block"
+          className="absolute bottom-1/4 left-1/2 w-[500px] h-[500px] bg-cyan-500/8 rounded-full blur-3xl"
           style={{
-            animation: "float 30s ease-in-out infinite"
+            animation: "float 35s ease-in-out infinite"
           }}
         />
       </div>
 
-      {/* Grid overlay */}
+      {/* Grid overlay - subtle for dark theme */}
       <div
         className="absolute inset-0 opacity-[0.02]"
         style={{
           backgroundImage: `
-            linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)
+            linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px)
           `,
-          backgroundSize: "50px 50px"
+          backgroundSize: "60px 60px"
         }}
       />
 

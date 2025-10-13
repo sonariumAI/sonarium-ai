@@ -130,7 +130,7 @@ export function FourPillarsSection() {
                 <div className="px-4 py-2 bg-secondary/20 text-secondary rounded-lg text-sm font-medium">
                   Deployment
                 </div>
-                <div className="px-4 py-2 bg-accent/20 text-accent rounded-lg text-sm font-medium">
+                <div className="px-4 py-2 bg-cyan-500/20 text-cyan-400 rounded-lg text-sm font-medium">
                   Governance
                 </div>
                 <div className="px-4 py-2 bg-white/10 text-white rounded-lg text-sm font-medium">

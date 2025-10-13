@@ -9,12 +9,12 @@ export function StructuredData() {
     name: "Sonarium AI",
     url: "https://sonarium.ai",
     logo: "https://sonarium.ai/logo.png",
-    description: "Transform your Large Language Models from promising prototypes to enterprise-ready production systems with comprehensive evaluation, deployment, and governance frameworks.",
+    description: "Deploy production-ready AI with confidence. Enterprise-grade evaluation, deployment, and governance—built in.",
     foundingDate: "2024",
     founder: {
       "@type": "Person",
       name: "Nicolas Debaene",
-      url: "https://linkedin.com/in/nicolas-debaene",
+      url: "https://www.linkedin.com/in/nicolas-debaene-58462210a/",
       jobTitle: "Founder & CEO"
     },
     address: {

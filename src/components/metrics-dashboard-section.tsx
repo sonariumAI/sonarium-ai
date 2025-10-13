@@ -35,86 +35,26 @@ export function MetricsDashboardSection() {
     }
   }, [])
 
-  const metrics = [
+  const challenges = [
     {
-      icon: Hash,
-      title: "Tokens per Request",
-      beforeValue: 2847,
-      afterValue: 1923,
-      beforeLabel: "Original",
-      afterLabel: "Optimized",
-      valueProps: {
-        decimals: 0,
-        separator: ","
-      },
-      variant: "reduction" as const
+      icon: AlertTriangle,
+      title: "Hallucinations",
+      description: "LLMs generate plausible but incorrect information. Without systematic evaluation, you can't quantify or reduce hallucination rates."
     },
     {
       icon: DollarSign,
-      title: "Cost per 1K Requests",
-      beforeValue: 12.45,
-      afterValue: 4.83,
-      beforeLabel: "Original",
-      afterLabel: "Optimized",
-      valueProps: {
-        decimals: 2,
-        prefix: "$"
-      },
-      variant: "reduction" as const
-    },
-    {
-      icon: AlertTriangle,
-      title: "Hallucination Rate",
-      beforeValue: 23.7,
-      afterValue: 4.2,
-      beforeLabel: "Original",
-      afterLabel: "Optimized",
-      valueProps: {
-        decimals: 1,
-        suffix: "%"
-      },
-      variant: "reduction" as const
-    },
-    {
-      icon: FileText,
-      title: "Citation Coverage",
-      beforeValue: 34.8,
-      afterValue: 91.3,
-      beforeLabel: "Original",
-      afterLabel: "Optimized",
-      valueProps: {
-        decimals: 1,
-        suffix: "%"
-      },
-      variant: "improvement" as const
+      title: "Unpredictable Costs",
+      description: "Token usage varies wildly across queries. Production costs can spiral without proper monitoring and optimization."
     },
     {
       icon: Clock,
-      title: "P95 Latency",
-      beforeValue: 3240,
-      afterValue: 847,
-      beforeLabel: "Original",
-      afterLabel: "Optimized",
-      valueProps: {
-        decimals: 0,
-        suffix: "ms",
-        separator: ","
-      },
-      variant: "reduction" as const
+      title: "Performance Issues",
+      description: "Latency and throughput degrade under load. What works in testing often fails at scale."
     },
     {
-      icon: CreditCard,
-      title: "Monthly GPU Spend",
-      beforeValue: 45780,
-      afterValue: 12340,
-      beforeLabel: "Original",
-      afterLabel: "Optimized",
-      valueProps: {
-        decimals: 0,
-        prefix: "$",
-        separator: ","
-      },
-      variant: "reduction" as const
+      icon: FileText,
+      title: "Lack of Observability",
+      description: "You can't debug what you can't see. Traditional monitoring tools don't capture LLM-specific failures."
     }
   ]
 
@@ -122,77 +62,47 @@ export function MetricsDashboardSection() {
     <Section size="lg" width="container" ref={sectionRef}>
       <FadeIn>
         <SectionHeader center>
-          <SectionTitle>Measurable Production Impact</SectionTitle>
+          <SectionTitle>De-Risk AI in Production</SectionTitle>
           <SectionDescription className="mx-auto max-w-3xl">
-            Real metrics from our enterprise clients show dramatic improvements across
-            all key performance indicators after implementing our production framework.
+            The AI measurement problem: without proper evaluation and monitoring,
+            you're deploying systems you can't truly control or improve.
           </SectionDescription>
         </SectionHeader>
       </FadeIn>
 
       <SectionContent>
-        {/* Metrics Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          {metrics.map((metric, index) => (
+        {/* Challenges Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+          {challenges.map((challenge, index) => (
             <FadeIn key={index} delay={0.2 + index * 0.1} direction="up">
-              <MetricCard
-                icon={metric.icon}
-                title={metric.title}
-                beforeValue={metric.beforeValue}
-                afterValue={metric.afterValue}
-                beforeLabel={metric.beforeLabel}
-                afterLabel={metric.afterLabel}
-                valueProps={metric.valueProps}
-                variant={metric.variant}
-                isVisible={isVisible}
-                className="h-full"
-              />
+              <div className="p-6 rounded-lg border border-border/50 bg-card/30 backdrop-blur-sm hover:border-primary/30 transition-all duration-200">
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <challenge.icon className="w-6 h-6 text-primary" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-lg font-semibold text-foreground mb-2">
+                      {challenge.title}
+                    </h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      {challenge.description}
+                    </p>
+                  </div>
+                </div>
+              </div>
             </FadeIn>
           ))}
         </div>
 
-        {/* Summary Stats */}
-        <div className="bg-gradient-to-r from-primary/5 to-secondary/5 border border-primary/10 rounded-2xl p-8">
-          <div className="text-center mb-6">
-            <h3 className="text-xl font-semibold text-foreground mb-2">
-              Average Client Improvements
-            </h3>
-            <p className="text-sm text-muted-foreground">
-              Across all our enterprise deployments
-            </p>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-green-500 mb-1">73%</div>
-              <div className="text-xs text-muted-foreground">Cost Reduction</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-blue-500 mb-1">84%</div>
-              <div className="text-xs text-muted-foreground">Faster Response</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-purple-500 mb-1">91%</div>
-              <div className="text-xs text-muted-foreground">Less Hallucinations</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-orange-500 mb-1">156%</div>
-              <div className="text-xs text-muted-foreground">Better Coverage</div>
-            </div>
-          </div>
-        </div>
-
-        {/* Call to Action */}
-        <div className="mt-12 text-center">
-          <div className="inline-flex flex-col items-center space-y-4 max-w-xl mx-auto">
-            <h3 className="text-lg font-semibold text-foreground">
-              Want to See These Results for Your LLMs?
-            </h3>
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              Our Production Readiness Audit will show you exactly where your current
-              implementation stands and how we can achieve similar improvements.
-            </p>
-          </div>
+        {/* Solution Statement */}
+        <div className="bg-gradient-to-r from-primary/5 to-secondary/5 border border-primary/10 rounded-2xl p-8 text-center">
+          <h3 className="text-xl font-semibold text-foreground mb-4">
+            Take Control of AI Complexity
+          </h3>
+          <p className="text-muted-foreground leading-relaxed max-w-2xl mx-auto">
+            We help you build the evaluation infrastructure, monitoring systems, and governance frameworks
+            needed to deploy AI systems with confidence—not hope.
+          </p>
         </div>
       </SectionContent>
     </Section>

@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     default: "Sonarium AI | LLM Evaluation, Deployment & Governance",
     template: "%s | Sonarium AI"
   },
-  description: "Transform your Large Language Models from promising prototypes to enterprise-ready production systems. Comprehensive LLM evaluation, deployment optimization, and AI governance frameworks for Fortune 500 companies.",
+  description: "Deploy production-ready AI with confidence. Enterprise-grade evaluation, deployment, and governance—built in. Comprehensive LLM frameworks for Fortune 500 companies.",
   keywords: [
     "LLM evaluation",
     "AI deployment",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     "model validation",
     "production AI systems"
   ],
-  authors: [{ name: "Nicolas Debaene", url: "https://linkedin.com/in/nicolas-debaene" }],
+  authors: [{ name: "Nicolas Debaene", url: "https://www.linkedin.com/in/nicolas-debaene-58462210a/" }],
   creator: "Sonarium AI",
   publisher: "Sonarium AI",
   category: "Technology",

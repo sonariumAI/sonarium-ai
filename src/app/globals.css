@@ -1,66 +1,88 @@
 @import "tailwindcss";
 
 :root {
-  /* Sonarium AI Dark Theme - Default */
-  --background: 0 0% 3.9%; /* #0a0a0a */
-  --foreground: 0 0% 98%;
-  --card: 0 0% 6.3%; /* Slightly lighter than bg */
+  /* Sonarium AI - Dark Theme (Galileo Inspired) */
+  --background: 222 47% 11%; /* Deep dark blue #0f1419 */
+  --foreground: 0 0% 98%; /* Almost white text */
+  --card: 222 40% 15%; /* Slightly lighter dark blue */
   --card-foreground: 0 0% 98%;
-  --popover: 0 0% 6.3%;
+  --popover: 222 40% 13%;
   --popover-foreground: 0 0% 98%;
-  --primary: 217 91% 60%; /* #3b82f6 */
-  --primary-foreground: 0 0% 98%;
-  --secondary: 188 100% 44%; /* #06b6d4 */
+  --primary: 197 100% 60%; /* Bright cyan */
+  --primary-foreground: 222 47% 11%;
+  --secondary: 250 80% 65%; /* Purple-blue accent */
   --secondary-foreground: 0 0% 98%;
-  --muted: 0 0% 14.9%;
-  --muted-foreground: 0 0% 63.9%;
-  --accent: 0 0% 14.9%;
+  --muted: 222 30% 20%; /* Dark blue-gray */
+  --muted-foreground: 220 10% 60%; /* Light gray text */
+  --accent: 222 35% 18%; /* Subtle dark accent */
   --accent-foreground: 0 0% 98%;
-  --destructive: 0 84.2% 60.2%;
+  --destructive: 0 72% 61%; /* Coral red */
   --destructive-foreground: 0 0% 98%;
-  --border: 0 0% 14.9%;
-  --input: 0 0% 14.9%;
-  --ring: 217 91% 60%; /* Primary color for focus rings */
-  --chart-1: 217 91% 60%; /* Primary */
-  --chart-2: 188 100% 44%; /* Secondary */
-  --chart-3: 197 37% 24%;
-  --chart-4: 43 74% 66%;
-  --chart-5: 27 87% 67%;
-  --radius: 0.5rem;
+  --border: 222 30% 22%; /* Dark border */
+  --input: 222 30% 20%;
+  --ring: 197 100% 60%; /* Cyan focus ring */
+  --chart-1: 197 100% 60%; /* Cyan */
+  --chart-2: 250 80% 65%; /* Purple-blue */
+  --chart-3: 280 70% 65%; /* Purple */
+  --chart-4: 0 72% 61%; /* Coral */
+  --chart-5: 45 90% 60%; /* Gold */
+  --radius: 0.75rem;
 
-  /* Sonarium AI Extended Palette */
-  --blue-50: 239 100% 97%;
-  --blue-100: 219 100% 92%;
-  --blue-200: 217 91% 85%;
-  --blue-300: 217 91% 70%;
-  --blue-400: 217 91% 60%; /* Primary */
-  --blue-500: 217 91% 50%;
-  --blue-600: 217 91% 40%;
-  --blue-700: 217 91% 30%;
-  --blue-800: 217 91% 20%;
-  --blue-900: 217 91% 10%;
+  /* Sonarium AI Extended Palette - Dark Theme */
+  --navy-50: 222 47% 95%;
+  --navy-100: 222 47% 85%;
+  --navy-200: 222 47% 70%;
+  --navy-300: 222 47% 50%;
+  --navy-400: 222 47% 35%;
+  --navy-500: 222 47% 25%;
+  --navy-600: 222 47% 18%;
+  --navy-700: 222 47% 13%;
+  --navy-800: 222 47% 11%; /* Base background */
+  --navy-900: 222 47% 8%;
 
-  --cyan-50: 183 100% 96%;
-  --cyan-100: 185 96% 90%;
-  --cyan-200: 186 94% 82%;
-  --cyan-300: 187 85% 53%;
-  --cyan-400: 188 100% 44%; /* Secondary */
-  --cyan-500: 188 100% 37%;
-  --cyan-600: 188 100% 31%;
-  --cyan-700: 188 100% 25%;
-  --cyan-800: 188 100% 19%;
-  --cyan-900: 188 100% 13%;
+  --blue-50: 230 100% 98%;
+  --blue-100: 230 100% 95%;
+  --blue-200: 230 100% 85%;
+  --blue-300: 230 70% 70%;
+  --blue-400: 230 56% 57%; /* Secondary blue */
+  --blue-500: 230 56% 47%;
+  --blue-600: 230 56% 37%;
+  --blue-700: 230 56% 27%;
+  --blue-800: 230 56% 20%;
+  --blue-900: 230 56% 10%;
 
-  --gray-50: 0 0% 98%;
-  --gray-100: 0 0% 96%;
-  --gray-200: 0 0% 89%;
-  --gray-300: 0 0% 83%;
-  --gray-400: 0 0% 64%;
-  --gray-500: 0 0% 45%;
-  --gray-600: 0 0% 32%;
-  --gray-700: 0 0% 25%;
-  --gray-800: 0 0% 15%;
-  --gray-900: 0 0% 9%;
+  --cyan-50: 197 100% 98%;
+  --cyan-100: 197 100% 95%;
+  --cyan-200: 197 100% 85%;
+  --cyan-300: 197 100% 70%;
+  --cyan-400: 197 100% 55%; /* Primary cyan */
+  --cyan-500: 197 100% 45%;
+  --cyan-600: 197 100% 35%;
+  --cyan-700: 197 100% 25%;
+  --cyan-800: 197 100% 18%;
+  --cyan-900: 197 100% 10%;
+
+  --coral-50: 0 72% 98%;
+  --coral-100: 0 72% 95%;
+  --coral-200: 0 72% 85%;
+  --coral-300: 0 72% 75%;
+  --coral-400: 0 72% 68%; /* Galileo coral */
+  --coral-500: 0 72% 61%;
+  --coral-600: 0 72% 51%;
+  --coral-700: 0 72% 41%;
+  --coral-800: 0 72% 31%;
+  --coral-900: 0 72% 21%;
+
+  --gray-50: 220 10% 98%;
+  --gray-100: 220 10% 96%;
+  --gray-200: 220 10% 92%;
+  --gray-300: 220 10% 85%;
+  --gray-400: 220 10% 64%;
+  --gray-500: 220 10% 45%;
+  --gray-600: 220 10% 32%;
+  --gray-700: 220 10% 25%;
+  --gray-800: 220 10% 15%;
+  --gray-900: 220 10% 8%;
 }
 
 @theme inline {
@@ -93,6 +115,17 @@
   --radius: var(--radius);
 
   /* Sonarium AI Extended Color Classes */
+  --color-navy-50: hsl(var(--navy-50));
+  --color-navy-100: hsl(var(--navy-100));
+  --color-navy-200: hsl(var(--navy-200));
+  --color-navy-300: hsl(var(--navy-300));
+  --color-navy-400: hsl(var(--navy-400));
+  --color-navy-500: hsl(var(--navy-500));
+  --color-navy-600: hsl(var(--navy-600));
+  --color-navy-700: hsl(var(--navy-700));
+  --color-navy-800: hsl(var(--navy-800));
+  --color-navy-900: hsl(var(--navy-900));
+
   --color-blue-50: hsl(var(--blue-50));
   --color-blue-100: hsl(var(--blue-100));
   --color-blue-200: hsl(var(--blue-200));
@@ -114,6 +147,17 @@
   --color-cyan-700: hsl(var(--cyan-700));
   --color-cyan-800: hsl(var(--cyan-800));
   --color-cyan-900: hsl(var(--cyan-900));
+
+  --color-coral-50: hsl(var(--coral-50));
+  --color-coral-100: hsl(var(--coral-100));
+  --color-coral-200: hsl(var(--coral-200));
+  --color-coral-300: hsl(var(--coral-300));
+  --color-coral-400: hsl(var(--coral-400));
+  --color-coral-500: hsl(var(--coral-500));
+  --color-coral-600: hsl(var(--coral-600));
+  --color-coral-700: hsl(var(--coral-700));
+  --color-coral-800: hsl(var(--coral-800));
+  --color-coral-900: hsl(var(--coral-900));
 
   --color-gray-50: hsl(var(--gray-50));
   --color-gray-100: hsl(var(--gray-100));
@@ -143,12 +187,33 @@ body {
   font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-feature-settings: "cv02", "cv03", "cv04", "cv11";
   font-size: 16px;
+  line-height: 1.6;
+  letter-spacing: -0.011em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 @media (min-width: 768px) {
   body {
-    font-size: 18px;
+    font-size: 17px;
   }
+}
+
+/* Refined headings - Galileo style */
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: -0.025em;
+  font-weight: 600;
+}
+
+h1 {
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+/* Smooth transitions */
+* {
+  transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
 }
