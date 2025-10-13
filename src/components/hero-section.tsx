@@ -22,7 +22,7 @@ export function HeroSection() {
         <div className="text-center max-w-5xl mx-auto">
           {/* Main Headline */}
           <FadeIn delay={0.2}>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white mb-6 sm:mb-8 leading-[1.1] tracking-tight px-2">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 sm:mb-8 leading-[1.1] tracking-tight px-2">
             Your Next Production LLM,<br />
             <span className="bg-gradient-to-r from-primary via-cyan-400 to-secondary bg-clip-text text-transparent">
               Powered by AI Expertise
