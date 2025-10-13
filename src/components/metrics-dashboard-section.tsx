@@ -2,44 +2,17 @@
 
 import * as React from "react"
 import { Section, SectionHeader, SectionTitle, SectionDescription, SectionContent } from "@/components/ui/section"
-import { MetricCard } from "@/components/ui/metric-card"
 import { FadeIn } from "@/components/ui/fade-in"
-import { Hash, DollarSign, AlertTriangle, FileText, Clock, CreditCard } from "lucide-react"
+import { DollarSign, AlertTriangle, FileText, Clock } from "lucide-react"
 
 export function MetricsDashboardSection() {
-  const [isVisible, setIsVisible] = React.useState(false)
   const sectionRef = React.useRef<HTMLDivElement>(null)
-
-  React.useEffect(() => {
-    const currentRef = sectionRef.current
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true)
-        }
-      },
-      {
-        threshold: 0.3,
-        rootMargin: "0px 0px -10% 0px"
-      }
-    )
-
-    if (currentRef) {
-      observer.observe(currentRef)
-    }
-
-    return () => {
-      if (currentRef) {
-        observer.unobserve(currentRef)
-      }
-    }
-  }, [])
 
   const challenges = [
     {
       icon: AlertTriangle,
       title: "Hallucinations",
-      description: "LLMs generate plausible but incorrect information. Without systematic evaluation, you can't quantify or reduce hallucination rates."
+      description: "LLMs generate plausible but incorrect information. Without systematic evaluation, you can&apos;t quantify or reduce hallucination rates."
     },
     {
       icon: DollarSign,
@@ -54,7 +27,7 @@ export function MetricsDashboardSection() {
     {
       icon: FileText,
       title: "Lack of Observability",
-      description: "You can't debug what you can't see. Traditional monitoring tools don't capture LLM-specific failures."
+      description: "You can&apos;t debug what you can&apos;t see. Traditional monitoring tools don&apos;t capture LLM-specific failures."
     }
   ]
 
@@ -65,7 +38,7 @@ export function MetricsDashboardSection() {
           <SectionTitle>De-Risk AI in Production</SectionTitle>
           <SectionDescription className="mx-auto max-w-3xl">
             The AI measurement problem: without proper evaluation and monitoring,
-            you're deploying systems you can't truly control or improve.
+            you&apos;re deploying systems you can&apos;t truly control or improve.
           </SectionDescription>
         </SectionHeader>
       </FadeIn>

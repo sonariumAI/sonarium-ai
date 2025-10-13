@@ -44,7 +44,7 @@ export function ProductionGapSection() {
             The Challenge of Production-Ready AI
           </SectionTitle>
           <SectionDescription className="mx-auto text-gray-300">
-            Building reliable AI systems for production is complex—whether you're starting from scratch or scaling existing models.
+            Building reliable AI systems for production is complex—whether you&apos;re starting from scratch or scaling existing models.
             Here are the critical challenges enterprises face.
           </SectionDescription>
         </SectionHeader>
