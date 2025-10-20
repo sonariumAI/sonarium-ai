@@ -9,8 +9,7 @@ import { Menu, X } from "lucide-react"
 
 const navigationItems = [
   { name: "Solutions", href: "/#solutions" },
-  { name: "Process", href: "/#process" },
-  { name: "Team", href: "/#team" },
+  { name: "Expertise", href: "/#expertise" },
   { name: "Contact", href: "/#contact" },
 ]
 
@@ -40,21 +39,21 @@ export function Navigation() {
       )}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center h-16">
           {/* Logo */}
           <Link href="/" className="flex-shrink-0">
             <Logo size="md" />
           </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-8">
+          {/* Desktop Navigation - Centered */}
+          <div className="hidden md:flex flex-1 justify-center">
+            <div className="flex items-baseline space-x-10">
               {navigationItems.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
                   className={cn(
-                    "text-sm font-medium transition-colors duration-200 hover:text-primary",
+                    "text-base font-semibold transition-colors duration-200 hover:text-primary",
                     mounted && isScrolled
                       ? "text-foreground/80 hover:text-primary"
                       : "text-white/90 hover:text-white"
@@ -66,21 +65,11 @@ export function Navigation() {
             </div>
           </div>
 
-          {/* CTA Button & Mobile Menu Button */}
-          <div className="flex items-center space-x-4">
-            <Link href="/book-demo">
-              <Button
-                size="lg"
-                className={cn(
-                  "hidden sm:inline-flex font-semibold",
-                  !mounted || !isScrolled ? "bg-white/10 text-white border-white/20 hover:bg-white/20" : ""
-                )}
-                variant={mounted && isScrolled ? "default" : "outline"}
-              >
-                Book a Demo
-              </Button>
-            </Link>
+          {/* Spacer for balance */}
+          <div className="hidden md:block flex-shrink-0" style={{ width: 'var(--logo-width, 120px)' }}></div>
 
+          {/* Mobile Menu Button */}
+          <div className="flex items-center md:hidden ml-auto">
             {/* Mobile menu button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -122,13 +111,6 @@ export function Navigation() {
                 {item.name}
               </Link>
             ))}
-            <div className="px-3 py-2">
-              <Link href="/book-demo" className="block">
-                <Button size="lg" className="w-full font-semibold">
-                  Book a Demo
-                </Button>
-              </Link>
-            </div>
           </div>
         </div>
       )}

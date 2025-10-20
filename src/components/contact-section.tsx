@@ -48,7 +48,7 @@ export function ContactSection() {
 
               {/* Contact Methods - Below form */}
               <div className="mt-8 pt-8 border-t border-border/50">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="flex justify-center">
                   {contactInfo.map((item, index) => (
                     <a
                       key={index}

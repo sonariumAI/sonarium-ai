@@ -3,7 +3,9 @@
 import * as React from "react"
 import { Section, SectionHeader, SectionTitle, SectionDescription, SectionContent } from "@/components/ui/section"
 import { FadeIn } from "@/components/ui/fade-in"
-import { DollarSign, AlertTriangle, FileText, Clock } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import { DollarSign, AlertTriangle, FileText, Clock, ArrowRight } from "lucide-react"
+import Link from "next/link"
 
 export function MetricsDashboardSection() {
   const sectionRef = React.useRef<HTMLDivElement>(null)
@@ -12,93 +14,85 @@ export function MetricsDashboardSection() {
     {
       icon: AlertTriangle,
       title: "Hallucinations",
-      description: "LLMs generate plausible but incorrect information. Without systematic evaluation, you can&apos;t quantify or reduce hallucination rates.",
-      example: "A US healthcare platform (Q2 2024) discovered 12% of drug interaction queries contained factual errors post-launch. A European fintech (Sept 2024) found their model cited non-existent regulatory filings in 8% of compliance responses. Both passed initial testing.",
-      bullets: {
-        title: "What we measure:",
-        items: [
-          "Factual accuracy rate by domain (medical, legal, financial)",
-          "Hallucination frequency per 1K responses",
-          "Source attribution accuracy for RAG systems",
-          "Confidence calibration (does stated confidence match actual accuracy)"
-        ]
-      }
+      description: "Your model sounds confident. But is it accurate?",
+      example: "Healthcare platform: 12% of drug interaction queries had factual errors. Fintech: 8% cited non-existent regulations. Both passed testing.",
+      bullets: [
+        "Factual accuracy by domain",
+        "Hallucination rate per 1K responses",
+        "RAG source attribution accuracy",
+        "Confidence vs. actual accuracy"
+      ],
+      cta: "Assess your hallucination risk"
     },
     {
       icon: DollarSign,
       title: "Unpredictable Costs",
-      description: "Token usage varies wildly across queries. Production costs can spiral without proper monitoring and optimization.",
-      example: "A B2B SaaS platform (Aug 2024) saw inference costs jump from $18K to $71K monthly when users began uploading PDFs. An Asia-Pacific legal tech company found 3% of queries consumed 47% of their token budget due to unnecessarily long context windows.",
-      bullets: {
-        title: "What we measure:",
-        items: [
-          "Cost per request by endpoint and user segment",
-          "Input/output token distribution (P50, P95, P99)",
-          "Context window utilization and waste",
-          "Model routing efficiency (expensive vs. cheaper model performance)",
-          "Cost per successful outcome (not just per API call)"
-        ]
-      }
+      description: "Token costs can spiral from $18K to $71K overnight.",
+      example: "B2B SaaS: Costs jumped 4x when users uploaded PDFs. Legal tech: 3% of queries ate 47% of budget.",
+      bullets: [
+        "Which 5% of requests drive 50% of costs",
+        "P95 token usage vs. P50",
+        "Context waste analysis",
+        "Cheaper model opportunities"
+      ],
+      cta: "Get a cost analysis"
     },
     {
       icon: Clock,
-      title: "Performance Issues",
-      description: "Latency and throughput degrade under load. What works in testing often fails at scale.",
-      example: "A document processing company (Jul 2024) saw throughput drop from 120 docs/hour to 18 docs/hour at scale. A financial services firm experienced P95 latency of 52 seconds during market hours while standard monitoring reported &apos;healthy&apos; status—they only tracked HTTP response codes.",
-      bullets: {
-        title: "What we measure:",
-        items: [
-          "Time-to-first-token (TTFT) and generation throughput",
-          "P50/P95/P99 latency by time of day and load",
-          "Queue depth and request abandonment rate",
-          "Throughput degradation under concurrent load"
-        ]
-      }
+      title: "Performance at Scale",
+      description: "120 docs/hour in testing. 18 docs/hour in production.",
+      example: "Document processor: 85% throughput drop at scale. Finance firm: 52s P95 latency during peak hours.",
+      bullets: [
+        "Time-to-first-token under load",
+        "P95/P99 latency patterns",
+        "Request abandonment rate",
+        "Concurrent load impact"
+      ],
+      cta: "Benchmark your system"
     },
     {
       icon: FileText,
-      title: "Lack of Observability",
-      description: "You can&apos;t debug what you can&apos;t see. Traditional monitoring tools don&apos;t capture LLM-specific failures.",
-      example: "A North American healthtech (Oct 2024) saw clinician satisfaction drop 22% after a model update. Logs showed 99.7% successful responses. A UK legal platform couldn&apos;t determine why output quality degraded—they had no systematic comparison across prompt versions or model releases.",
-      bullets: {
-        title: "What we measure:",
-        items: [
-          "Output quality scores (ROUGE, semantic similarity, task-specific)",
-          "Prompt effectiveness across model versions",
-          "RAG retrieval precision and model utilization rate",
-          "Reasoning chain quality and intermediate step accuracy"
-        ]
-      }
+      title: "Invisible Failures",
+      description: "99.7% successful responses. 22% drop in user satisfaction.",
+      example: "Healthtech: Quality tanked after update but logs looked fine. Legal: Couldn't trace output degradation.",
+      bullets: [
+        "Output quality tracking",
+        "Prompt version comparison",
+        "RAG retrieval effectiveness",
+        "Reasoning chain analysis"
+      ],
+      cta: "Set up proper monitoring"
     }
   ]
 
   return (
-    <Section size="lg" width="container" ref={sectionRef} className="bg-gradient-to-b from-background to-gray-900/20">
+    <Section id="solutions" size="lg" width="container" ref={sectionRef} className="bg-gradient-to-b from-background to-gray-900/20">
       <FadeIn>
         <SectionHeader center>
           <SectionTitle className="text-white">De-Risk AI in Production</SectionTitle>
           <SectionDescription className="mx-auto max-w-3xl text-gray-300">
             The AI measurement problem: without proper evaluation and monitoring,
-            you&apos;re deploying systems you can&apos;t truly control or improve.
+            you're deploying systems you can't truly control or improve.
           </SectionDescription>
         </SectionHeader>
       </FadeIn>
 
       <SectionContent>
         {/* Challenges Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
           {challenges.map((challenge, index) => (
             <FadeIn key={index} delay={0.2 + index * 0.1} direction="up">
-              <div className="p-6 rounded-lg border border-border/50 bg-card/30 backdrop-blur-sm hover:border-primary/30 transition-all duration-200">
+              <div className="group p-8 rounded-xl border border-border/50 bg-card/30 backdrop-blur-sm hover:border-primary/40 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300 flex flex-col h-full">
+                {/* Icon and Title */}
                 <div className="flex items-start space-x-4 mb-4">
-                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <challenge.icon className="w-6 h-6 text-primary" />
+                  <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                    <challenge.icon className="w-7 h-7 text-primary" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-lg font-semibold text-foreground mb-2">
+                    <h3 className="text-xl font-bold text-white mb-2">
                       {challenge.title}
                     </h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed">
+                    <p className="text-base text-gray-300 leading-snug font-medium">
                       {challenge.description}
                     </p>
                   </div>
@@ -106,23 +100,39 @@ export function MetricsDashboardSection() {
 
                 {/* Real Example */}
                 <div className="mt-4 pt-4 border-t border-border/30">
-                  <p className="text-xs font-semibold text-primary mb-2">Real Example:</p>
-                  <p className="text-sm text-muted-foreground/90 leading-relaxed italic">
+                  <div className="flex items-center gap-2 mb-2">
+                    <div className="w-1.5 h-1.5 rounded-full bg-primary"></div>
+                    <p className="text-xs font-bold text-primary uppercase tracking-wider">Real Impact</p>
+                  </div>
+                  <p className="text-sm text-gray-400 leading-relaxed">
                     {challenge.example}
                   </p>
                 </div>
 
-                {/* Bullet Points */}
-                <div className="mt-4 pt-4 border-t border-border/30">
-                  <p className="text-xs font-semibold text-primary mb-3">{challenge.bullets.title}</p>
-                  <ul className="space-y-2">
-                    {challenge.bullets.items.map((item, i) => (
-                      <li key={i} className="text-sm text-muted-foreground flex items-start">
-                        <span className="text-primary mr-2 mt-1">•</span>
+                {/* What We Measure */}
+                <div className="mt-5 pt-5 border-t border-border/30 flex-1">
+                  <p className="text-xs font-bold text-gray-300 mb-3 uppercase tracking-wider">What We Measure</p>
+                  <ul className="space-y-2.5">
+                    {challenge.bullets.map((item, i) => (
+                      <li key={i} className="text-sm text-gray-400 flex items-start group/item">
+                        <span className="text-primary mr-2.5 mt-0.5 group-hover/item:scale-125 transition-transform">→</span>
                         <span className="flex-1">{item}</span>
                       </li>
                     ))}
                   </ul>
+                </div>
+
+                {/* CTA Button */}
+                <div className="mt-6 pt-4 border-t border-border/30">
+                  <Link href="/book-demo">
+                    <Button
+                      variant="outline"
+                      className="w-full group/btn border-primary/30 text-primary hover:bg-primary/10 hover:border-primary/50 transition-all duration-300"
+                    >
+                      {challenge.cta}
+                      <ArrowRight className="ml-2 h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
+                    </Button>
+                  </Link>
                 </div>
               </div>
             </FadeIn>
@@ -130,15 +140,26 @@ export function MetricsDashboardSection() {
         </div>
 
         {/* Solution Statement */}
-        <div className="bg-gradient-to-r from-primary/5 to-secondary/5 border border-primary/10 rounded-2xl p-8 text-center">
-          <h3 className="text-xl font-semibold text-foreground mb-4">
-            Take Control of AI Complexity
-          </h3>
-          <p className="text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-            We help you build the evaluation infrastructure, monitoring systems, and governance frameworks
-            needed to deploy AI systems with confidence—not hope.
-          </p>
-        </div>
+        <FadeIn delay={0.6}>
+          <div className="relative overflow-hidden bg-gradient-to-br from-primary/10 via-primary/5 to-transparent border border-primary/20 rounded-2xl p-10 text-center">
+            <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:30px_30px]"></div>
+            <div className="relative z-10">
+              <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+                Stop Guessing. Start Measuring.
+              </h3>
+              <p className="text-gray-300 text-lg leading-relaxed max-w-3xl mx-auto mb-6">
+                We build the evaluation systems, monitoring infrastructure, and governance frameworks
+                you need to ship AI with confidence.
+              </p>
+              <Link href="/book-demo">
+                <Button size="lg" className="group font-semibold">
+                  Get Your Free AI Risk Assessment
+                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </FadeIn>
       </SectionContent>
     </Section>
   )

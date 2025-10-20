@@ -7,8 +7,7 @@ export function Footer() {
 
   const quickLinks = [
     { label: "Solutions", href: "/#solutions" },
-    { label: "Process", href: "/#process" },
-    { label: "Team", href: "/#team" },
+    { label: "Expertise", href: "/#expertise" },
     { label: "Contact", href: "/#contact" }
   ]
 
@@ -64,7 +63,7 @@ export function Footer() {
               <span>nicolas@sonarium.ai</span>
             </a>
             <a
-              href="https://www.linkedin.com/in/nicolas-debaene-58462210a/"
+              href="https://www.linkedin.com/company/107914865"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center space-x-2 text-sm text-muted-foreground hover:text-primary transition-colors"
