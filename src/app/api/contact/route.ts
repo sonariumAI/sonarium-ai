@@ -79,8 +79,9 @@ export async function POST(request: NextRequest) {
     `
 
     // Send email to your business email
+    // Note: Using onboarding@resend.dev until sonarium.ai domain is verified
     const { error } = await resend.emails.send({
-      from: "Contact Form <contact@sonarium.ai>",
+      from: "Sonarium AI Contact Form <onboarding@resend.dev>",
       to: ["nicolas@sonarium.ai"],
       subject: `New Contact: ${name} from ${company}`,
       html: emailContent,
@@ -136,8 +137,10 @@ export async function POST(request: NextRequest) {
     </div>
     `
 
+    // Send confirmation email to user
+    // Note: Using onboarding@resend.dev until sonarium.ai domain is verified
     await resend.emails.send({
-      from: "Sonarium AI <noreply@sonarium.ai>",
+      from: "Sonarium AI <onboarding@resend.dev>",
       to: [email],
       subject: "Thanks for contacting Sonarium AI - We'll be in touch soon!",
       html: confirmationEmail,
