@@ -72,7 +72,7 @@ export function MetricsDashboardSection() {
           <SectionTitle className="text-white">De-Risk AI in Production</SectionTitle>
           <SectionDescription className="mx-auto max-w-3xl text-gray-300">
             The AI measurement problem: without proper evaluation and monitoring,
-            you're deploying systems you can't truly control or improve.
+            you&apos;re deploying systems you can&apos;t truly control or improve.
           </SectionDescription>
         </SectionHeader>
       </FadeIn>
