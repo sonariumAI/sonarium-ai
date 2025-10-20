@@ -5,10 +5,6 @@ import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/ca
 import { Section, SectionHeader, SectionTitle, SectionDescription, SectionContent } from "@/components/ui/section";
 
 // Lazy load heavy sections
-const ProductionGapSection = dynamic(() => import("@/components/production-gap-section").then(mod => ({ default: mod.ProductionGapSection })), {
-  loading: () => <div className="h-96 animate-pulse bg-muted/10 rounded-lg" />
-});
-
 const MetricsDashboardSection = dynamic(() => import("@/components/metrics-dashboard-section").then(mod => ({ default: mod.MetricsDashboardSection })), {
   loading: () => <div className="h-96 animate-pulse bg-muted/10 rounded-lg" />
 });
@@ -33,11 +29,6 @@ export default function Home() {
           <FounderSection />
         </LazySection>
       </div>
-
-      {/* Production Gap Section */}
-      <LazySection>
-        <ProductionGapSection />
-      </LazySection>
 
       {/* Metrics Dashboard Section */}
       <LazySection>

@@ -13,14 +13,14 @@ export function MetricsDashboardSection() {
       icon: AlertTriangle,
       title: "Hallucinations",
       description: "LLMs generate plausible but incorrect information. Without systematic evaluation, you can&apos;t quantify or reduce hallucination rates.",
-      example: "Your medical Q&A bot tells a patient that ibuprofen is safe with warfarin. The response sounds confident, cites realistic medical terminology, and passes all your regex checks. Three weeks later, you discover 12% of drug interaction queries contain dangerous errors.",
+      example: "A US healthcare platform (Q2 2024) discovered 12% of drug interaction queries contained factual errors post-launch. A European fintech (Sept 2024) found their model cited non-existent regulatory filings in 8% of compliance responses. Both passed initial testing.",
       bullets: {
-        title: "What You Can&apos;t Answer:",
+        title: "What we measure:",
         items: [
-          "What&apos;s our baseline hallucination rate across different query types?",
-          "Which prompt changes actually reduced errors vs. just changed the error mode?",
-          "Are hallucinations clustered in specific domains or edge cases?",
-          "How do we catch subtle factual errors that sound completely plausible?"
+          "Factual accuracy rate by domain (medical, legal, financial)",
+          "Hallucination frequency per 1K responses",
+          "Source attribution accuracy for RAG systems",
+          "Confidence calibration (does stated confidence match actual accuracy)"
         ]
       }
     },
@@ -28,14 +28,15 @@ export function MetricsDashboardSection() {
       icon: DollarSign,
       title: "Unpredictable Costs",
       description: "Token usage varies wildly across queries. Production costs can spiral without proper monitoring and optimization.",
-      example: "Your customer service bot&apos;s monthly bill jumps from $15K to $68K. Turns out 3% of queries trigger a pathological case where the model generates massive context windows. A single user&apos;s conversation thread consumed $2,400 in tokens across 40 messages.",
+      example: "A B2B SaaS platform (Aug 2024) saw inference costs jump from $18K to $71K monthly when users began uploading PDFs. An Asia-Pacific legal tech company found 3% of queries consumed 47% of their token budget due to unnecessarily long context windows.",
       bullets: {
-        title: "Hidden Cost Drivers:",
+        title: "What we measure:",
         items: [
-          "Which users, query patterns, or features are driving 80% of token spend?",
-          "Are we paying for redundant context or unnecessarily long outputs?",
-          "What&apos;s the ROI on expensive models vs. cheaper alternatives for each use case?",
-          "How much are we spending on requests that users immediately discard?"
+          "Cost per request by endpoint and user segment",
+          "Input/output token distribution (P50, P95, P99)",
+          "Context window utilization and waste",
+          "Model routing efficiency (expensive vs. cheaper model performance)",
+          "Cost per successful outcome (not just per API call)"
         ]
       }
     },
@@ -43,14 +44,14 @@ export function MetricsDashboardSection() {
       icon: Clock,
       title: "Performance Issues",
       description: "Latency and throughput degrade under load. What works in testing often fails at scale.",
-      example: "At 3PM daily, your document summarization feature slows to a crawl. P95 latency hits 45 seconds. 40% of requests time out. Users start complaining. Your metrics show &apos;API healthy&apos; because you&apos;re only tracking response codes, not actual user experience or LLM-specific bottlenecks.",
+      example: "A document processing company (Jul 2024) saw throughput drop from 120 docs/hour to 18 docs/hour at scale. A financial services firm experienced P95 latency of 52 seconds during market hours while standard monitoring reported &apos;healthy&apos; status—they only tracked HTTP response codes.",
       bullets: {
-        title: "What Traditional Monitoring Misses:",
+        title: "What we measure:",
         items: [
-          "LLM-specific latency patterns (time-to-first-token vs. total generation time)",
-          "Token throughput degradation under concurrent load",
-          "Context window exhaustion causing cascading failures",
-          "Rate limit interactions across multiple models/providers"
+          "Time-to-first-token (TTFT) and generation throughput",
+          "P50/P95/P99 latency by time of day and load",
+          "Queue depth and request abandonment rate",
+          "Throughput degradation under concurrent load"
         ]
       }
     },
@@ -58,25 +59,25 @@ export function MetricsDashboardSection() {
       icon: FileText,
       title: "Lack of Observability",
       description: "You can&apos;t debug what you can&apos;t see. Traditional monitoring tools don&apos;t capture LLM-specific failures.",
-      example: "Users report that your code review assistant &apos;got worse&apos; after a deployment. Your logs show 200 OK responses. Your metrics look fine. But you have no way to compare output quality, prompt effectiveness, or model behavior before and after the change. You&apos;re debugging blind.",
+      example: "A North American healthtech (Oct 2024) saw clinician satisfaction drop 22% after a model update. Logs showed 99.7% successful responses. A UK legal platform couldn&apos;t determine why output quality degraded—they had no systematic comparison across prompt versions or model releases.",
       bullets: {
-        title: "What Traditional Monitoring Misses:",
+        title: "What we measure:",
         items: [
-          "Prompt template performance across different model versions",
-          "Output quality drift as user behavior evolves",
-          "Which RAG retrievals are actually being used vs. ignored by the model",
-          "Chain-of-thought reasoning failures that produce wrong answers with high confidence"
+          "Output quality scores (ROUGE, semantic similarity, task-specific)",
+          "Prompt effectiveness across model versions",
+          "RAG retrieval precision and model utilization rate",
+          "Reasoning chain quality and intermediate step accuracy"
         ]
       }
     }
   ]
 
   return (
-    <Section size="lg" width="container" ref={sectionRef}>
+    <Section size="lg" width="container" ref={sectionRef} className="bg-gradient-to-b from-background to-gray-900/20">
       <FadeIn>
         <SectionHeader center>
-          <SectionTitle>De-Risk AI in Production</SectionTitle>
-          <SectionDescription className="mx-auto max-w-3xl">
+          <SectionTitle className="text-white">De-Risk AI in Production</SectionTitle>
+          <SectionDescription className="mx-auto max-w-3xl text-gray-300">
             The AI measurement problem: without proper evaluation and monitoring,
             you&apos;re deploying systems you can&apos;t truly control or improve.
           </SectionDescription>
