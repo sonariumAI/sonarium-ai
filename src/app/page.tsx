@@ -35,6 +35,13 @@ export default function Home() {
       {/* Hero Section */}
       <HeroSection />
 
+      {/* Team - Founder Section */}
+      <div id="team">
+        <LazySection>
+          <FounderSection />
+        </LazySection>
+      </div>
+
       {/* Production Gap Section */}
       <LazySection>
         <ProductionGapSection />
@@ -58,13 +65,6 @@ export default function Home() {
       <LazySection>
         <MetricsDashboardSection />
       </LazySection>
-
-      {/* Team - Founder Section */}
-      <div id="team">
-        <LazySection>
-          <FounderSection />
-        </LazySection>
-      </div>
 
       {/* Contact Section */}
       <div id="contact">

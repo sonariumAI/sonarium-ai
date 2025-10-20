@@ -38,50 +38,7 @@ export function PreFooterCtaSection() {
               </div>
 
               {/* CTA Options */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-                {/* Book Free Audit */}
-                <div className="group relative">
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/5 rounded-2xl blur opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  <div className="relative p-8 rounded-2xl border border-primary/20 bg-card/50 backdrop-blur-sm group-hover:border-primary/40 transition-all duration-300 group-hover:scale-[1.02]">
-                    <div className="flex items-center space-x-4 mb-6">
-                      <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center shadow-lg">
-                        <CalendarDays className="w-7 h-7 text-white" />
-                      </div>
-                      <div>
-                        <h3 className="text-2xl font-bold text-foreground mb-2">
-                          Book Free Audit
-                        </h3>
-                        <p className="text-sm text-primary font-semibold uppercase tracking-wider">
-                          90-Minute Assessment
-                        </p>
-                      </div>
-                    </div>
-
-                    <ul className="space-y-3 mb-8 text-sm text-muted-foreground">
-                      <li className="flex items-center space-x-3">
-                        <div className="w-1.5 h-1.5 rounded-full bg-primary" />
-                        <span>Production readiness assessment</span>
-                      </li>
-                      <li className="flex items-center space-x-3">
-                        <div className="w-1.5 h-1.5 rounded-full bg-primary" />
-                        <span>Cost optimization analysis</span>
-                      </li>
-                      <li className="flex items-center space-x-3">
-                        <div className="w-1.5 h-1.5 rounded-full bg-primary" />
-                        <span>Custom improvement roadmap</span>
-                      </li>
-                    </ul>
-
-                    <Button
-                      size="lg"
-                      className="w-full group/btn bg-gradient-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary/80 text-white shadow-lg hover:shadow-xl transition-all duration-300"
-                    >
-                      Schedule Your Audit
-                      <ArrowRight className="ml-2 h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
-                    </Button>
-                  </div>
-                </div>
-
+              <div className="max-w-xl mx-auto mb-12">
                 {/* Get Framework */}
                 <div className="group relative">
                   <div className="absolute inset-0 bg-gradient-to-br from-secondary/20 to-secondary/5 rounded-2xl blur opacity-0 group-hover:opacity-100 transition-opacity duration-300" />

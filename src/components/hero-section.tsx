@@ -78,18 +78,6 @@ export function HeroSection() {
             </Link>
           </div>
           </FadeIn>
-
-          {/* Trust Indicators */}
-          <FadeIn delay={1.0}>
-            <div className="mt-16 sm:mt-20 lg:mt-24 pt-8 sm:pt-10 border-t border-white/10">
-              <p className="text-sm sm:text-base text-gray-400 mb-6 sm:mb-8">
-                Trusted by AI teams at leading companies
-              </p>
-              <div className="flex items-center justify-center gap-6 sm:gap-8 md:gap-12 opacity-50 flex-wrap px-4">
-                {/* Placeholder for company logos */}
-              </div>
-            </div>
-          </FadeIn>
         </div>
       </motion.div>
     </AnimatedBackground>

@@ -1,3 +1,5 @@
+"use client"
+
 import * as React from "react"
 import { Section, SectionHeader, SectionTitle, SectionContent } from "@/components/ui/section"
 import { Card } from "@/components/ui/card"
@@ -59,6 +61,58 @@ export function FounderSection() {
                   Connect on LinkedIn
                 </a>
               </Button>
+
+              {/* Previously at */}
+              <div className="mt-6 pt-6 border-t border-border/30 flex-1 flex flex-col">
+                <p className="text-xs text-muted-foreground text-center mb-4">Previously at</p>
+                <div className="flex flex-col items-center justify-around flex-1 py-4">
+                  <div className="px-6 py-3 bg-card/30 border border-border/20 rounded-lg backdrop-blur-sm hover:bg-card/50 hover:border-primary/30 transition-all duration-300 hover:scale-105">
+                    <img
+                      src="/logos/toptal.png"
+                      alt="Toptal"
+                      className="h-10 w-auto transition-all"
+                      onError={(e) => {
+                        e.currentTarget.style.display = 'none';
+                        e.currentTarget.parentElement!.innerHTML = '<div class="text-sm font-semibold text-foreground/70 hover:text-primary transition-colors px-3 py-1 border border-border/30 rounded">Toptal</div>';
+                      }}
+                    />
+                  </div>
+                  <div className="px-6 py-3 bg-card/30 border border-border/20 rounded-lg backdrop-blur-sm hover:bg-card/50 hover:border-primary/30 transition-all duration-300 hover:scale-105">
+                    <img
+                      src="/logos/rappi.png"
+                      alt="Rappi"
+                      className="h-10 w-auto transition-all"
+                      onError={(e) => {
+                        e.currentTarget.style.display = 'none';
+                        e.currentTarget.parentElement!.innerHTML = '<div class="text-sm font-semibold text-foreground/70 hover:text-primary transition-colors px-3 py-1 border border-border/30 rounded">Rappi</div>';
+                      }}
+                    />
+                  </div>
+                  <div className="px-6 py-3 bg-card/30 border border-border/20 rounded-lg backdrop-blur-sm hover:bg-card/50 hover:border-primary/30 transition-all duration-300 hover:scale-105">
+                    <img
+                      src="/logos/bnp-paribas.png"
+                      alt="BNP Paribas"
+                      className="h-10 w-auto transition-all"
+                      onError={(e) => {
+                        e.currentTarget.style.display = 'none';
+                        e.currentTarget.parentElement!.innerHTML = '<div class="text-sm font-semibold text-foreground/70 hover:text-primary transition-colors px-3 py-1 border border-border/30 rounded">BNP Paribas</div>';
+                      }}
+                    />
+                  </div>
+                  <div className="px-6 py-3 bg-card/30 border border-border/20 rounded-lg backdrop-blur-sm hover:bg-card/50 hover:border-primary/30 transition-all duration-300 hover:scale-105">
+                    <img
+                      src="/logos/cebuana-lhuillier.png"
+                      alt="Cebuana Lhuillier"
+                      className="h-10 w-auto transition-all"
+                      style={{ filter: 'hue-rotate(180deg) saturate(1.5) brightness(1.3)' }}
+                      onError={(e) => {
+                        e.currentTarget.style.display = 'none';
+                        e.currentTarget.parentElement!.innerHTML = '<div class="text-sm font-semibold text-foreground/70 hover:text-primary transition-colors px-3 py-1 border border-border/30 rounded">Cebuana Lhuillier</div>';
+                      }}
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
 
             {/* Right Column - Bio and Quote */}
@@ -105,7 +159,7 @@ export function FounderSection() {
                   <div className="text-xs text-muted-foreground">Years in AI</div>
                 </div>
                 <div className="text-center p-3 bg-card/50 rounded-lg border border-border/50">
-                  <div className="text-2xl font-bold text-secondary">100+</div>
+                  <div className="text-2xl font-bold text-secondary">30+</div>
                   <div className="text-xs text-muted-foreground">Models Deployed</div>
                 </div>
               </div>

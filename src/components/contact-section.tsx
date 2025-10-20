@@ -15,13 +15,6 @@ export function ContactSection() {
       description: "Get in touch directly",
       value: "nicolas@sonarium.ai",
       href: "mailto:nicolas@sonarium.ai"
-    },
-    {
-      icon: Calendar,
-      title: "Free Audit",
-      description: "90-minute assessment",
-      value: "Book a call",
-      href: "#"
     }
   ]
 
@@ -46,7 +39,7 @@ export function ContactSection() {
                   Get in Touch
                 </h3>
                 <p className="text-muted-foreground text-sm">
-                  Tell us about your project and we&apos;ll get back to you within 2 business hours.
+                  Tell us about your project and we&apos;ll get back to you soon.
                 </p>
               </div>
 
