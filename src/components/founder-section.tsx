@@ -66,7 +66,7 @@ export function FounderSection() {
               <div className="mt-6 pt-6 border-t border-border/30 flex-1 flex flex-col">
                 <p className="text-xs text-muted-foreground text-center mb-4">Previously at</p>
                 <div className="flex flex-col items-center justify-around flex-1 py-4">
-                  <div className="px-6 py-3 bg-card/30 border border-border/20 rounded-lg backdrop-blur-sm hover:bg-card/50 hover:border-primary/30 transition-all duration-300 hover:scale-105">
+                  <div className="px-6 py-3 bg-transparent border border-transparent rounded-lg hover:border-primary/20 transition-all duration-300 hover:scale-105">
                     <img
                       src="/logos/toptal.png"
                       alt="Toptal"
@@ -77,7 +77,7 @@ export function FounderSection() {
                       }}
                     />
                   </div>
-                  <div className="px-6 py-3 bg-card/30 border border-border/20 rounded-lg backdrop-blur-sm hover:bg-card/50 hover:border-primary/30 transition-all duration-300 hover:scale-105">
+                  <div className="px-6 py-3 bg-transparent border border-transparent rounded-lg hover:border-primary/20 transition-all duration-300 hover:scale-105">
                     <img
                       src="/logos/rappi.png"
                       alt="Rappi"
@@ -88,7 +88,7 @@ export function FounderSection() {
                       }}
                     />
                   </div>
-                  <div className="px-6 py-3 bg-card/30 border border-border/20 rounded-lg backdrop-blur-sm hover:bg-card/50 hover:border-primary/30 transition-all duration-300 hover:scale-105">
+                  <div className="px-6 py-3 bg-transparent border border-transparent rounded-lg hover:border-primary/20 transition-all duration-300 hover:scale-105">
                     <img
                       src="/logos/bnp-paribas.png"
                       alt="BNP Paribas"
@@ -99,7 +99,7 @@ export function FounderSection() {
                       }}
                     />
                   </div>
-                  <div className="px-6 py-3 bg-card/30 border border-border/20 rounded-lg backdrop-blur-sm hover:bg-card/50 hover:border-primary/30 transition-all duration-300 hover:scale-105">
+                  <div className="px-6 py-3 bg-transparent border border-transparent rounded-lg hover:border-primary/20 transition-all duration-300 hover:scale-105">
                     <img
                       src="/logos/cebuana-lhuillier.png"
                       alt="Cebuana Lhuillier"

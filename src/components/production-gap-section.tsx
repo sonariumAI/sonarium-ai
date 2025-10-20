@@ -1,8 +1,10 @@
 import * as React from "react"
+import Link from "next/link"
 import { Section, SectionHeader, SectionTitle, SectionDescription, SectionContent } from "@/components/ui/section"
 import { StatCard } from "@/components/ui/stat-card"
 import { FadeIn } from "@/components/ui/fade-in"
-import { AlertTriangle, TrendingDown, ShieldX, GitBranch } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import { AlertTriangle, TrendingDown, ShieldX, GitBranch, ArrowRight } from "lucide-react"
 
 export function ProductionGapSection() {
   const stats = [
@@ -69,14 +71,19 @@ export function ProductionGapSection() {
         {/* Call to Action */}
         <FadeIn delay={0.8}>
           <div className="mt-12 text-center">
-            <p className="text-lg text-gray-300 mb-4">
+            <p className="text-lg text-gray-300 mb-6">
               Ready to bridge the gap between demo and production?
             </p>
-            <div className="inline-flex items-center justify-center space-x-2 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full px-6 py-3">
-              <span className="text-sm text-gray-300">
+            <Link href="/book-demo">
+              <Button
+                size="lg"
+                variant="outline"
+                className="group border-white/20 text-white hover:bg-white/10 hover:border-white/30 backdrop-blur-sm transition-all duration-300"
+              >
                 See how Sonarium AI transforms your LLM deployment strategy
-              </span>
-            </div>
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </Link>
           </div>
         </FadeIn>
       </SectionContent>

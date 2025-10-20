@@ -9,14 +9,6 @@ const ProductionGapSection = dynamic(() => import("@/components/production-gap-s
   loading: () => <div className="h-96 animate-pulse bg-muted/10 rounded-lg" />
 });
 
-const FourPillarsSection = dynamic(() => import("@/components/four-pillars-section").then(mod => ({ default: mod.FourPillarsSection })), {
-  loading: () => <div className="h-96 animate-pulse bg-muted/10 rounded-lg" />
-});
-
-const TimelineSection = dynamic(() => import("@/components/timeline-section").then(mod => ({ default: mod.TimelineSection })), {
-  loading: () => <div className="h-96 animate-pulse bg-muted/10 rounded-lg" />
-});
-
 const MetricsDashboardSection = dynamic(() => import("@/components/metrics-dashboard-section").then(mod => ({ default: mod.MetricsDashboardSection })), {
   loading: () => <div className="h-96 animate-pulse bg-muted/10 rounded-lg" />
 });
@@ -46,20 +38,6 @@ export default function Home() {
       <LazySection>
         <ProductionGapSection />
       </LazySection>
-
-      {/* Solutions - Four Pillars Section */}
-      <div id="solutions">
-        <LazySection>
-          <FourPillarsSection />
-        </LazySection>
-      </div>
-
-      {/* Process - Timeline Section */}
-      <div id="process">
-        <LazySection>
-          <TimelineSection />
-        </LazySection>
-      </div>
 
       {/* Metrics Dashboard Section */}
       <LazySection>
