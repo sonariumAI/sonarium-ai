@@ -4,6 +4,7 @@ import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 import { StructuredData } from "@/components/structured-data";
 import { Analytics } from "@/components/analytics";
+import { HashScrollHandler } from "@/components/hash-scroll-handler";
 import "./globals.css";
 
 const inter = Inter({
@@ -118,6 +119,7 @@ export default function RootLayout({
       >
         <Analytics />
         <StructuredData />
+        <HashScrollHandler />
         <Navigation />
         {children}
         <Footer />

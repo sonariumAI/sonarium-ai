@@ -19,7 +19,7 @@ export function ContactSection() {
   ]
 
   return (
-    <Section size="lg" width="container" className="bg-gradient-to-b from-background to-card/30">
+    <Section id="contact" size="lg" width="container" className="bg-gradient-to-b from-background to-card/30">
       <SectionHeader center>
         <FadeIn>
           <SectionTitle>Ready to Deploy Production-Grade AI?</SectionTitle>

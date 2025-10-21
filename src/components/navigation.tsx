@@ -49,18 +49,34 @@ export function Navigation() {
           <div className="hidden md:flex flex-1 justify-center">
             <div className="flex items-baseline space-x-10">
               {navigationItems.map((item) => (
-                <Link
+                <a
                   key={item.name}
                   href={item.href}
                   className={cn(
-                    "text-base font-semibold transition-colors duration-200 hover:text-primary",
+                    "text-base font-semibold transition-colors duration-200 hover:text-primary cursor-pointer",
                     mounted && isScrolled
                       ? "text-foreground/80 hover:text-primary"
                       : "text-white/90 hover:text-white"
                   )}
+                  onClick={(e) => {
+                    e.preventDefault()
+                    const hash = item.href.replace('/', '')
+
+                    // If we're not on the home page, navigate there first
+                    if (window.location.pathname !== '/') {
+                      window.location.href = item.href
+                      return
+                    }
+
+                    // Scroll to the section
+                    const target = document.querySelector(hash)
+                    if (target) {
+                      target.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                    }
+                  }}
                 >
                   {item.name}
-                </Link>
+                </a>
               ))}
             </div>
           </div>
@@ -102,14 +118,30 @@ export function Navigation() {
               : "bg-background/95 backdrop-blur-md border-white/10"
           )}>
             {navigationItems.map((item) => (
-              <Link
+              <a
                 key={item.name}
                 href={item.href}
-                className="block px-3 py-2 text-base font-medium text-foreground/80 hover:text-primary hover:bg-accent rounded-md transition-colors duration-200"
-                onClick={() => setIsMobileMenuOpen(false)}
+                className="block px-3 py-2 text-base font-medium text-foreground/80 hover:text-primary hover:bg-accent rounded-md transition-colors duration-200 cursor-pointer"
+                onClick={(e) => {
+                  e.preventDefault()
+                  setIsMobileMenuOpen(false)
+                  const hash = item.href.replace('/', '')
+
+                  // If we're not on the home page, navigate there first
+                  if (window.location.pathname !== '/') {
+                    window.location.href = item.href
+                    return
+                  }
+
+                  // Scroll to the section
+                  const target = document.querySelector(hash)
+                  if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                  }
+                }}
               >
                 {item.name}
-              </Link>
+              </a>
             ))}
           </div>
         </div>

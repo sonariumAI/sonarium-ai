@@ -67,15 +67,26 @@ export function HeroSection() {
               </Button>
             </Link>
 
-            <Link href="/#solutions">
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-white/20 text-white hover:bg-white/10 hover:border-white/30 backdrop-blur-sm transition-all duration-300 w-full sm:w-auto min-h-[56px] px-8 text-lg"
-              >
-                Discover Our Solutions
-              </Button>
-            </Link>
+            <Button
+              size="lg"
+              variant="outline"
+              className="border-white/20 text-white hover:bg-white/10 hover:border-white/30 backdrop-blur-sm transition-all duration-300 w-full sm:w-auto min-h-[56px] px-8 text-lg cursor-pointer"
+              onClick={() => {
+                // If we're not on the home page, navigate there first
+                if (window.location.pathname !== '/') {
+                  window.location.href = '/#solutions'
+                  return
+                }
+
+                // Scroll to the section
+                const target = document.querySelector('#solutions')
+                if (target) {
+                  target.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                }
+              }}
+            >
+              Discover Our Solutions
+            </Button>
           </div>
           </FadeIn>
         </div>
