@@ -22,11 +22,7 @@ export function ContactSection() {
     <Section size="lg" width="container" className="bg-gradient-to-b from-background to-card/30">
       <SectionHeader center>
         <FadeIn>
-          <SectionTitle>Ready to Transform Your LLMs?</SectionTitle>
-          <SectionDescription className="mx-auto max-w-3xl">
-            Let&apos;s discuss how Sonarium AI can help you move from prototype to production.
-            Book a free 90-minute audit or send us a message to get started.
-          </SectionDescription>
+          <SectionTitle>Ready to Deploy Production-Grade AI?</SectionTitle>
         </FadeIn>
       </SectionHeader>
 

@@ -124,7 +124,7 @@ export function MetricsDashboardSection() {
 
                 {/* CTA Button */}
                 <div className="mt-6 pt-4 border-t border-border/30">
-                  <Link href="/book-demo">
+                  <Link href="/#contact">
                     <Button
                       variant="outline"
                       className="w-full group/btn border-primary/30 text-primary hover:bg-primary/10 hover:border-primary/50 transition-all duration-300"
@@ -151,7 +151,7 @@ export function MetricsDashboardSection() {
                 We build the evaluation systems, monitoring infrastructure, and governance frameworks
                 you need to ship AI with confidence.
               </p>
-              <Link href="/book-demo">
+              <Link href="/#contact">
                 <Button size="lg" className="group font-semibold">
                   Get Your Free AI Risk Assessment
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
