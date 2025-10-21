@@ -66,48 +66,48 @@ export function FounderSection() {
               <div className="mt-4 pt-4 border-t border-border/30 flex-1 flex flex-col">
                 <p className="text-xs text-muted-foreground text-center mb-3">Previously at</p>
                 <div className="flex flex-col items-center justify-around flex-1 py-2">
-                  <div className="px-6 py-3 bg-transparent border border-transparent rounded-lg hover:border-primary/20 transition-all duration-300 hover:scale-105">
+                  <div className="px-6 py-3">
                     <img
                       src="/logos/toptal.png"
                       alt="Toptal"
-                      className="h-10 w-auto transition-all"
+                      className="h-10 w-auto"
                       onError={(e) => {
                         e.currentTarget.style.display = 'none';
-                        e.currentTarget.parentElement!.innerHTML = '<div class="text-sm font-semibold text-foreground/70 hover:text-primary transition-colors px-3 py-1 border border-border/30 rounded">Toptal</div>';
+                        e.currentTarget.parentElement!.innerHTML = '<div class="text-sm font-semibold text-foreground/70 px-3 py-1">Toptal</div>';
                       }}
                     />
                   </div>
-                  <div className="px-6 py-3 bg-transparent border border-transparent rounded-lg hover:border-primary/20 transition-all duration-300 hover:scale-105">
+                  <div className="px-6 py-3">
                     <img
                       src="/logos/rappi.png"
                       alt="Rappi"
-                      className="h-10 w-auto transition-all"
+                      className="h-10 w-auto"
                       onError={(e) => {
                         e.currentTarget.style.display = 'none';
-                        e.currentTarget.parentElement!.innerHTML = '<div class="text-sm font-semibold text-foreground/70 hover:text-primary transition-colors px-3 py-1 border border-border/30 rounded">Rappi</div>';
+                        e.currentTarget.parentElement!.innerHTML = '<div class="text-sm font-semibold text-foreground/70 px-3 py-1">Rappi</div>';
                       }}
                     />
                   </div>
-                  <div className="px-6 py-3 bg-transparent border border-transparent rounded-lg hover:border-primary/20 transition-all duration-300 hover:scale-105">
+                  <div className="px-6 py-3">
                     <img
                       src="/logos/bnp-paribas.png"
                       alt="BNP Paribas"
-                      className="h-10 w-auto transition-all"
+                      className="h-10 w-auto"
                       onError={(e) => {
                         e.currentTarget.style.display = 'none';
-                        e.currentTarget.parentElement!.innerHTML = '<div class="text-sm font-semibold text-foreground/70 hover:text-primary transition-colors px-3 py-1 border border-border/30 rounded">BNP Paribas</div>';
+                        e.currentTarget.parentElement!.innerHTML = '<div class="text-sm font-semibold text-foreground/70 px-3 py-1">BNP Paribas</div>';
                       }}
                     />
                   </div>
-                  <div className="px-6 py-3 bg-transparent border border-transparent rounded-lg hover:border-primary/20 transition-all duration-300 hover:scale-105">
+                  <div className="px-6 py-3">
                     <img
                       src="/logos/cebuana-lhuillier.png"
                       alt="Cebuana Lhuillier"
-                      className="h-10 w-auto transition-all"
+                      className="h-10 w-auto"
                       style={{ filter: 'hue-rotate(180deg) saturate(1.5) brightness(1.3)' }}
                       onError={(e) => {
                         e.currentTarget.style.display = 'none';
-                        e.currentTarget.parentElement!.innerHTML = '<div class="text-sm font-semibold text-foreground/70 hover:text-primary transition-colors px-3 py-1 border border-border/30 rounded">Cebuana Lhuillier</div>';
+                        e.currentTarget.parentElement!.innerHTML = '<div class="text-sm font-semibold text-foreground/70 px-3 py-1">Cebuana Lhuillier</div>';
                       }}
                     />
                   </div>

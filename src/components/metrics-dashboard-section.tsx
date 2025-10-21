@@ -121,19 +121,6 @@ export function MetricsDashboardSection() {
                     ))}
                   </ul>
                 </div>
-
-                {/* CTA Button */}
-                <div className="mt-6 pt-4 border-t border-border/30">
-                  <Link href="/#contact">
-                    <Button
-                      variant="outline"
-                      className="w-full group/btn border-primary/30 text-primary hover:bg-primary/10 hover:border-primary/50 transition-all duration-300"
-                    >
-                      {challenge.cta}
-                      <ArrowRight className="ml-2 h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
-                    </Button>
-                  </Link>
-                </div>
               </div>
             </FadeIn>
           ))}
