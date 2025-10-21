@@ -68,10 +68,19 @@ export function Navigation() {
                       return
                     }
 
-                    // Scroll to the section
-                    const target = document.querySelector(hash)
-                    if (target) {
-                      target.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                    // Scroll to the section with retry logic
+                    const scrollToTarget = () => {
+                      const target = document.querySelector(hash)
+                      if (target) {
+                        target.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                        return true
+                      }
+                      return false
+                    }
+
+                    // Try immediately, then retry if not found
+                    if (!scrollToTarget()) {
+                      setTimeout(scrollToTarget, 100)
                     }
                   }}
                 >
@@ -133,10 +142,19 @@ export function Navigation() {
                     return
                   }
 
-                  // Scroll to the section
-                  const target = document.querySelector(hash)
-                  if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                  // Scroll to the section with retry logic
+                  const scrollToTarget = () => {
+                    const target = document.querySelector(hash)
+                    if (target) {
+                      target.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                      return true
+                    }
+                    return false
+                  }
+
+                  // Try immediately, then retry if not found
+                  if (!scrollToTarget()) {
+                    setTimeout(scrollToTarget, 100)
                   }
                 }}
               >

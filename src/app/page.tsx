@@ -1,21 +1,7 @@
-import dynamic from "next/dynamic";
 import { HeroSection } from "@/components/hero-section";
-import { LazySection } from "@/components/ui/lazy-section";
-import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Section, SectionHeader, SectionTitle, SectionDescription, SectionContent } from "@/components/ui/section";
-
-// Lazy load heavy sections
-const MetricsDashboardSection = dynamic(() => import("@/components/metrics-dashboard-section").then(mod => ({ default: mod.MetricsDashboardSection })), {
-  loading: () => <div className="h-96 animate-pulse bg-muted/10 rounded-lg" />
-});
-
-const FounderSection = dynamic(() => import("@/components/founder-section").then(mod => ({ default: mod.FounderSection })), {
-  loading: () => <div className="h-96 animate-pulse bg-muted/10 rounded-lg" />
-});
-
-const ContactSection = dynamic(() => import("@/components/contact-section").then(mod => ({ default: mod.ContactSection })), {
-  loading: () => <div className="h-96 animate-pulse bg-muted/10 rounded-lg" />
-});
+import { MetricsDashboardSection } from "@/components/metrics-dashboard-section";
+import { FounderSection } from "@/components/founder-section";
+import { ContactSection } from "@/components/contact-section";
 
 export default function Home() {
   return (
@@ -24,23 +10,13 @@ export default function Home() {
       <HeroSection />
 
       {/* Team - Founder Section */}
-      <div id="team">
-        <LazySection>
-          <FounderSection />
-        </LazySection>
-      </div>
+      <FounderSection />
 
       {/* Metrics Dashboard Section */}
-      <LazySection>
-        <MetricsDashboardSection />
-      </LazySection>
+      <MetricsDashboardSection />
 
       {/* Contact Section */}
-      <div id="contact">
-        <LazySection>
-          <ContactSection />
-        </LazySection>
-      </div>
+      <ContactSection />
     </div>
   );
 }

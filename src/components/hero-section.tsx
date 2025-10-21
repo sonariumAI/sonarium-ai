@@ -2,23 +2,16 @@
 
 import * as React from "react"
 import Link from "next/link"
-import { motion, useScroll, useTransform } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { AnimatedBackground } from "@/components/ui/animated-background"
 import { FadeIn } from "@/components/ui/fade-in"
 import { ArrowRight, CheckCircle } from "lucide-react"
 
 export function HeroSection() {
-  const { scrollY } = useScroll()
-  const y = useTransform(scrollY, [0, 500], [0, 150])
-  const opacity = useTransform(scrollY, [0, 300], [1, 0])
-
   return (
     <AnimatedBackground className="min-h-[100vh] lg:min-h-[110vh] flex items-center justify-center pt-16">
-      <motion.div
-        style={{ y, opacity }}
-        className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-32 lg:py-40"
-      >
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-32 lg:py-40">
+
         <div className="text-center max-w-5xl mx-auto">
           {/* Main Headline */}
           <FadeIn delay={0.2}>
@@ -78,10 +71,19 @@ export function HeroSection() {
                   return
                 }
 
-                // Scroll to the section
-                const target = document.querySelector('#solutions')
-                if (target) {
-                  target.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                // Scroll to the section with retry logic
+                const scrollToTarget = () => {
+                  const target = document.querySelector('#solutions')
+                  if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                    return true
+                  }
+                  return false
+                }
+
+                // Try immediately, then retry if not found
+                if (!scrollToTarget()) {
+                  setTimeout(scrollToTarget, 100)
                 }
               }}
             >
@@ -90,7 +92,7 @@ export function HeroSection() {
           </div>
           </FadeIn>
         </div>
-      </motion.div>
+      </div>
     </AnimatedBackground>
   )
 }
