@@ -147,7 +147,7 @@ export function CaseStudySection() {
               <div className="p-4 rounded-xl bg-card/20 border border-border/20">
                 <p className="text-sm text-muted-foreground leading-relaxed">
                   <span className="font-medium text-foreground">The challenge:</span> Existing spreadsheet-based planning
-                  couldn't react fast enough to market volatility. Decisions were made on gut feel and stale data.
+                  couldn&apos;t react fast enough to market volatility. Decisions were made on gut feel and stale data.
                   We built a system that ingests real-time market signals, runs price forecasts, and recommends
                   optimal sugar/ethanol splits daily—with full explainability for the operations team.
                 </p>
