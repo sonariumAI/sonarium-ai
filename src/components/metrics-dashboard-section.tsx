@@ -128,11 +128,10 @@ export function MetricsDashboardSection() {
             <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:30px_30px]"></div>
             <div className="relative z-10">
               <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
-                Different Industry? Let&apos;s Talk.
+                Have a Similar Challenge?
               </h3>
               <p className="text-gray-300 text-lg leading-relaxed max-w-3xl mx-auto mb-6">
-                If you have complex operational decisions, quantifiable outcomes, and data to work with—
-                we can probably help. The patterns transfer across industries.
+                We work with companies facing complex operational decisions where better forecasting and optimization can drive measurable results.
               </p>
               <Link href="/#contact">
                 <Button size="lg" className="group font-semibold">

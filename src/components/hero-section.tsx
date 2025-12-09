@@ -36,10 +36,6 @@ export function HeroSection() {
           {/* Differentiation + Founder Credibility */}
           <FadeIn delay={0.6}>
             <div className="flex flex-col items-center gap-3 mb-8 sm:mb-12 px-4">
-            <p className="text-sm sm:text-base text-gray-400 max-w-2xl text-center">
-              Not a platform vendor. Not a consulting army. A small team that builds and owns
-              production systems—from model development to ongoing monitoring.
-            </p>
             <div className="flex items-center space-x-2 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full px-3 sm:px-4 py-2">
               <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0" />
               <span className="text-xs sm:text-sm text-gray-300">
