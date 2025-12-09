@@ -22,7 +22,7 @@ export function ContactSection() {
     <Section id="contact" size="lg" width="container" className="bg-gradient-to-b from-background to-card/30">
       <SectionHeader center>
         <FadeIn>
-          <SectionTitle>Ready to Deploy Production-Grade AI?</SectionTitle>
+          <SectionTitle>See If We&apos;re a Fit</SectionTitle>
         </FadeIn>
       </SectionHeader>
 

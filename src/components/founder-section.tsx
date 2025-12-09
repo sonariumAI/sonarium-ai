@@ -10,7 +10,7 @@ export function FounderSection() {
   return (
     <Section id="expertise" size="lg" width="container">
       <SectionHeader center>
-        <SectionTitle>From Algorithm to Production System</SectionTitle>
+        <SectionTitle>Who You&apos;ll Work With</SectionTitle>
       </SectionHeader>
 
       <SectionContent>
@@ -120,22 +120,21 @@ export function FounderSection() {
               {/* Bio */}
               <div className="space-y-4">
                 <p className="text-foreground leading-relaxed">
-                  With over <span className="font-semibold text-primary">10+ years</span> of experience
-                  in AI and machine learning, Nicolas bridges the critical gap between cutting-edge research
-                  and production-ready systems.
+                  With over <span className="font-semibold text-primary">10+ years</span> building
+                  ML systems for operational decisions—forecasting, optimization, and decision support
+                  in finance, logistics, and industrial operations.
                 </p>
 
                 <p className="text-muted-foreground leading-relaxed">
-                  A graduate of <span className="font-semibold">Telecom ParisTech</span>, one of France&apos;s
-                  leading engineering schools, Nicolas has led AI initiatives at top-tier technology companies,
-                  transforming experimental models into robust, scalable production systems.
+                  A graduate of <span className="font-semibold">Telecom ParisTech</span>, Nicolas has
+                  built production ML systems at BNP Paribas (quantitative finance), Rappi (logistics optimization),
+                  and for industrial clients across Latin America and Europe.
                 </p>
 
                 <p className="text-muted-foreground leading-relaxed">
-                  His expertise spans the entire ML lifecycle - from algorithm design and evaluation
-                  frameworks to deployment architecture and governance protocols. Nicolas founded
-                  Sonarium AI to solve the fundamental challenge that every enterprise faces:
-                  making LLMs work reliably in production.
+                  He founded Sonarium AI to work on the problems he finds most interesting:
+                  complex operational decisions where better forecasting and optimization
+                  translate directly into measurable business outcomes.
                 </p>
               </div>
 
@@ -143,26 +142,15 @@ export function FounderSection() {
               <div className="relative p-6 bg-gradient-to-br from-primary/5 to-secondary/5 rounded-lg border border-primary/10">
                 <Quote className="absolute top-4 left-4 w-6 h-6 text-primary/30" />
                 <blockquote className="text-lg italic text-foreground pl-8">
-                  &ldquo;The difference between a demo and a production system isn&apos;t just code—it&apos;s
-                  systematic evaluation, robust governance, and the discipline to build for reliability
-                  over novelty.&rdquo;
+                  &ldquo;The best ML systems aren&apos;t the most sophisticated—they&apos;re the ones
+                  that operators actually trust and use. That means explainability, reliability,
+                  and integration with how decisions are really made.&rdquo;
                 </blockquote>
                 <cite className="block text-sm text-muted-foreground mt-3 pl-8">
                   — Nicolas Debaene, Founder of Sonarium AI
                 </cite>
               </div>
 
-              {/* Experience Highlights */}
-              <div className="grid grid-cols-2 gap-4 pt-4">
-                <div className="text-center p-3 bg-card/50 rounded-lg border border-border/50">
-                  <div className="text-2xl font-bold text-primary">10+</div>
-                  <div className="text-xs text-muted-foreground">Years in AI</div>
-                </div>
-                <div className="text-center p-3 bg-card/50 rounded-lg border border-border/50">
-                  <div className="text-2xl font-bold text-secondary">30+</div>
-                  <div className="text-xs text-muted-foreground">Models Deployed</div>
-                </div>
-              </div>
             </div>
           </div>
         </Card>

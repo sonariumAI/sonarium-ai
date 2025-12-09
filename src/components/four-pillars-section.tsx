@@ -2,83 +2,83 @@ import * as React from "react"
 import { Section, SectionHeader, SectionTitle, SectionDescription, SectionContent } from "@/components/ui/section"
 import { PillarCard } from "@/components/ui/pillar-card"
 import { AnimatedBackground } from "@/components/ui/animated-background"
-import { Target, Zap, Shield, DollarSign } from "lucide-react"
+import { TrendingUp, Cog, BarChart3, Clock } from "lucide-react"
 
 export function FourPillarsSection() {
   const pillars = [
     {
-      icon: Target,
-      title: "LLM Evaluation",
-      description: "Comprehensive testing and validation frameworks that ensure your models perform reliably across diverse scenarios and edge cases.",
+      icon: TrendingUp,
+      title: "Demand & Price Forecasting",
+      description: "Custom ML models that predict market movements, demand patterns, and price dynamics with quantified uncertainty.",
       features: [
-        "Advanced coverage scoring algorithms",
-        "Real-time hallucination detection",
-        "Bias and fairness assessment",
-        "Performance benchmarking suites",
-        "Custom evaluation metrics"
+        "Multi-horizon forecasting (days to quarters)",
+        "Uncertainty quantification & confidence intervals",
+        "External signal integration (weather, market data)",
+        "Regime change detection",
+        "Backtesting against historical decisions"
       ],
       outcomes: [
-        "95%+ accuracy in production environments",
-        "Reduced hallucination rates by 60-80%",
-        "Quantified model reliability scores",
-        "Comprehensive evaluation reports"
+        "15-25% forecast error reduction (typical range based on data maturity)",
+        "Earlier detection of market shifts",
+        "Quantified confidence for decision-making",
+        "Audit trail for every prediction"
       ],
       variant: "primary" as const
     },
     {
-      icon: Zap,
-      title: "Production Deployment",
-      description: "Enterprise-grade deployment infrastructure with intelligent serving optimization and comprehensive monitoring capabilities.",
+      icon: Cog,
+      title: "Operational Optimization",
+      description: "Optimization systems that turn forecasts into actionable decisions—production schedules, inventory levels, routing.",
       features: [
-        "Intelligent serving optimization",
-        "Auto-scaling infrastructure",
-        "Real-time performance monitoring",
-        "A/B testing frameworks",
-        "Rollback and versioning systems"
+        "Mixed-integer and constraint programming",
+        "Multi-objective optimization (cost, risk, throughput)",
+        "What-if scenario analysis",
+        "Real-time re-optimization triggers",
+        "Integration with existing ERP/planning systems"
       ],
       outcomes: [
-        "99.9% uptime and availability",
-        "50% faster response times",
-        "Seamless scaling to millions of requests",
-        "Zero-downtime deployments"
+        "2-5% margin improvement (see case study: 3.2% for sugar/ethanol)",
+        "Reduced manual planning overhead",
+        "Faster response to supply/demand changes",
+        "Defensible, explainable decisions"
       ],
       variant: "secondary" as const
     },
     {
-      icon: Shield,
-      title: "AI Governance",
-      description: "Complete governance framework ensuring compliance, security, and ethical AI practices with comprehensive audit trails.",
+      icon: BarChart3,
+      title: "Decision Support Systems",
+      description: "Tools that surface insights to operators and executives—not black boxes, but systems humans can trust and override.",
       features: [
-        "AIGN (AI Governance Network) framework",
-        "Comprehensive audit trails",
-        "Compliance monitoring",
-        "Risk assessment protocols",
-        "Policy enforcement automation"
+        "Explainable model outputs",
+        "Scenario comparison dashboards",
+        "Alert systems for anomalies",
+        "Historical decision tracking",
+        "Role-based access and workflows"
       ],
       outcomes: [
-        "Full regulatory compliance",
-        "Complete traceability and accountability",
-        "Risk mitigation and security",
-        "Ethical AI implementation"
+        "Faster decision cycles (hours → minutes)",
+        "Reduced reliance on tribal knowledge",
+        "Clear accountability for recommendations",
+        "Adoption by non-technical users"
       ],
       variant: "accent" as const
     },
     {
-      icon: DollarSign,
-      title: "Cost Optimization",
-      description: "Advanced optimization strategies that dramatically reduce computational costs while maintaining or improving performance.",
+      icon: Clock,
+      title: "Production ML Infrastructure",
+      description: "The engineering that keeps models running reliably—monitoring, retraining, drift detection, and graceful degradation.",
       features: [
-        "GPU utilization optimization",
-        "Intelligent caching systems",
-        "Resource allocation algorithms",
-        "Cost monitoring and alerts",
-        "Performance vs. cost analysis"
+        "Automated model retraining pipelines",
+        "Data and concept drift monitoring",
+        "Fallback logic for edge cases",
+        "Performance dashboards",
+        "Integration with existing data infrastructure"
       ],
       outcomes: [
-        "60-80% reduction in GPU costs",
-        "Optimal resource utilization",
-        "Predictable cost structures",
-        "ROI-driven optimization strategies"
+        "99.5%+ model availability",
+        "Early warning on model degradation",
+        "Reduced time-to-fix for issues",
+        "Predictable maintenance overhead"
       ],
       variant: "default" as const
     }
@@ -89,11 +89,11 @@ export function FourPillarsSection() {
       <Section size="lg" width="container">
         <SectionHeader center>
           <SectionTitle className="text-white mb-4">
-            Four Pillars of Production Excellence
+            What We Build
           </SectionTitle>
           <SectionDescription className="mx-auto text-gray-300 max-w-3xl">
-            Our comprehensive approach transforms your LLMs from experimental prototypes
-            into robust, scalable, and cost-effective production systems.
+            End-to-end ML systems for operational decisions—from forecasting models
+            to optimization engines to the infrastructure that keeps them running.
           </SectionDescription>
         </SectionHeader>
 
@@ -117,24 +117,24 @@ export function FourPillarsSection() {
           <div className="mt-16 text-center">
             <div className="inline-flex flex-col items-center space-y-4 bg-white/[0.03] backdrop-blur-xl border border-white/[0.08] rounded-2xl p-8 max-w-2xl mx-auto">
               <h3 className="text-xl font-semibold text-white">
-                Ready to Build Production-Ready LLMs?
+                How We Typically Engage
               </h3>
               <p className="text-gray-300 text-sm leading-relaxed">
-                Our four-pillar approach ensures your models don&apos;t just work in demos—they excel in production.
-                Get started with a comprehensive evaluation of your current LLM infrastructure.
+                Most engagements start with a paid diagnostic: we review your current forecasting accuracy,
+                decision processes, and data infrastructure to scope the highest-impact work.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 pt-2">
                 <div className="px-4 py-2 bg-primary/20 text-primary rounded-lg text-sm font-medium">
-                  Evaluation
+                  Forecasting
                 </div>
                 <div className="px-4 py-2 bg-secondary/20 text-secondary rounded-lg text-sm font-medium">
-                  Deployment
+                  Optimization
                 </div>
                 <div className="px-4 py-2 bg-cyan-500/20 text-cyan-400 rounded-lg text-sm font-medium">
-                  Governance
+                  Decision Support
                 </div>
                 <div className="px-4 py-2 bg-white/10 text-white rounded-lg text-sm font-medium">
-                  Optimization
+                  Infrastructure
                 </div>
               </div>
             </div>

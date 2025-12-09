@@ -16,9 +16,9 @@ export function HeroSection() {
           {/* Main Headline */}
           <FadeIn delay={0.2}>
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 sm:mb-8 leading-[1.1] tracking-tight px-2">
-            Your Next Production LLM,<br />
+            Production ML for<br />
             <span className="bg-gradient-to-r from-primary via-cyan-400 to-secondary bg-clip-text text-transparent">
-              Powered by AI Expertise
+              Complex Operations
             </span>
           </h1>
           </FadeIn>
@@ -26,69 +26,43 @@ export function HeroSection() {
           {/* Subheading */}
           <FadeIn delay={0.4}>
             <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-300 mb-10 sm:mb-12 max-w-4xl mx-auto leading-relaxed px-2">
-            Deploy production-ready AI with confidence. Enterprise-grade{" "}
-            <span className="text-primary font-semibold">evaluation</span>,{" "}
-            <span className="text-secondary font-semibold">deployment</span>, and{" "}
-            <span className="text-primary font-semibold">governance</span>—built in.
+            Forecasting and optimization for companies where decisions move markets—
+            <span className="text-primary font-semibold">commodities</span>,{" "}
+            <span className="text-secondary font-semibold">logistics</span>,{" "}
+            <span className="text-primary font-semibold">manufacturing</span>, finance.
           </p>
           </FadeIn>
 
-          {/* Founder Credibility */}
+          {/* Differentiation + Founder Credibility */}
           <FadeIn delay={0.6}>
-            <div className="flex items-center justify-center mb-8 sm:mb-12 px-4">
+            <div className="flex flex-col items-center gap-3 mb-8 sm:mb-12 px-4">
+            <p className="text-sm sm:text-base text-gray-400 max-w-2xl text-center">
+              Not a platform vendor. Not a consulting army. A small team that builds and owns
+              production systems—from model development to ongoing monitoring.
+            </p>
             <div className="flex items-center space-x-2 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full px-3 sm:px-4 py-2">
               <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0" />
               <span className="text-xs sm:text-sm text-gray-300">
                 Founded by{" "}
-                <span className="text-white font-semibold">Nicolas Debaene</span>,
-                former AI research lead at top tech companies
+                <span className="text-white font-semibold">Nicolas Debaene</span>
+                {" "}— previously BNP Paribas, Rappi, Toptal
               </span>
             </div>
           </div>
           </FadeIn>
 
-          {/* CTA Buttons */}
+          {/* CTA Button */}
           <FadeIn delay={0.8}>
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center px-4">
+            <div className="flex justify-center px-4">
             <Link href="/book-demo">
               <Button
                 size="lg"
-                className="group bg-primary hover:bg-primary/90 text-white shadow-lg hover:shadow-primary/25 transition-all duration-300 w-full sm:w-auto min-h-[56px] px-8 text-lg"
+                className="group bg-primary hover:bg-primary/90 text-white shadow-lg hover:shadow-primary/25 transition-all duration-300 min-h-[56px] px-8 text-lg"
               >
                 Request a Demo
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>
-
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-white/20 text-white hover:bg-white/10 hover:border-white/30 backdrop-blur-sm transition-all duration-300 w-full sm:w-auto min-h-[56px] px-8 text-lg cursor-pointer"
-              onClick={() => {
-                // If we're not on the home page, navigate there first
-                if (window.location.pathname !== '/') {
-                  window.location.href = '/#solutions'
-                  return
-                }
-
-                // Scroll to the section with retry logic
-                const scrollToTarget = () => {
-                  const target = document.querySelector('#solutions')
-                  if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' })
-                    return true
-                  }
-                  return false
-                }
-
-                // Try immediately, then retry if not found
-                if (!scrollToTarget()) {
-                  setTimeout(scrollToTarget, 100)
-                }
-              }}
-            >
-              Discover Our Solutions
-            </Button>
           </div>
           </FadeIn>
         </div>

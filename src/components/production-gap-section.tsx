@@ -4,36 +4,36 @@ import { Section, SectionHeader, SectionTitle, SectionDescription, SectionConten
 import { StatCard } from "@/components/ui/stat-card"
 import { FadeIn } from "@/components/ui/fade-in"
 import { Button } from "@/components/ui/button"
-import { AlertTriangle, TrendingDown, ShieldX, GitBranch, ArrowRight } from "lucide-react"
+import { AlertTriangle, TrendingDown, Calculator, Clock, ArrowRight } from "lucide-react"
 
 export function ProductionGapSection() {
   const stats = [
     {
-      icon: AlertTriangle,
-      stat: "15-27%",
-      title: "Hallucination Rate",
-      description: "Critical accuracy issues in production environments lead to unreliable outputs and user distrust.",
+      icon: TrendingDown,
+      stat: "15-30%",
+      title: "Forecast Error",
+      description: "The typical MAPE range we measure in initial assessments—often reducible by a third or more.",
       variant: "danger" as const
     },
     {
-      icon: TrendingDown,
-      stat: "50%+",
-      title: "Wasted GPU Spend",
-      description: "Inefficient resource allocation and poor optimization result in massive computational waste.",
+      icon: Calculator,
+      stat: "Spreadsheet",
+      title: "Planning Tools",
+      description: "Production decisions often run through Excel. We've seen 8-figure operations managed this way.",
       variant: "warning" as const
     },
     {
-      icon: ShieldX,
-      stat: "No",
-      title: "Validation Framework",
-      description: "Lack of systematic testing and validation leads to unpredictable model behavior in production.",
+      icon: AlertTriangle,
+      stat: "Low Trust",
+      title: "Model Adoption",
+      description: "Existing models often go unused. Operators need explainability and override capability to trust outputs.",
       variant: "danger" as const
     },
     {
-      icon: GitBranch,
-      stat: "Zero",
-      title: "Ungoverned Deployments",
-      description: "Models deployed without proper governance, compliance, or monitoring frameworks in place.",
+      icon: Clock,
+      stat: "Days",
+      title: "Reaction Time",
+      description: "Manual replanning cycles mean market shifts are detected too late to capture the full opportunity.",
       variant: "info" as const
     }
   ]
@@ -43,11 +43,11 @@ export function ProductionGapSection() {
       <FadeIn>
         <SectionHeader center>
           <SectionTitle className="text-white">
-            The Challenge of Production-Ready AI
+            Patterns We See in Initial Assessments
           </SectionTitle>
           <SectionDescription className="mx-auto text-gray-300">
-            Building reliable AI systems for production is complex—whether you&apos;re starting from scratch or scaling existing models.
-            Here are the critical challenges enterprises face.
+            In our diagnostic work with commodity and logistics companies,
+            these are the gaps that typically surface—and where we find the most opportunity.
           </SectionDescription>
         </SectionHeader>
       </FadeIn>
@@ -72,7 +72,7 @@ export function ProductionGapSection() {
         <FadeIn delay={0.8}>
           <div className="mt-12 text-center">
             <p className="text-lg text-gray-300 mb-6">
-              Ready to bridge the gap between demo and production?
+              What would a 20% improvement in forecast accuracy mean for your margins?
             </p>
             <Link href="/book-demo">
               <Button
@@ -80,7 +80,7 @@ export function ProductionGapSection() {
                 variant="outline"
                 className="group border-white/20 text-white hover:bg-white/10 hover:border-white/30 backdrop-blur-sm transition-all duration-300"
               >
-                See how Sonarium AI transforms your LLM deployment strategy
+                Discuss your forecasting challenges
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>
