@@ -1,23 +1,28 @@
 globalThis.__BUILD_MANIFEST = {
   "pages": {
-    "/_app": []
+    "/_app": [
+      "static/chunks/916bde09a67dc9db.js",
+      "static/chunks/5bf7f405c8f6b1b8.js",
+      "static/chunks/turbopack-d0aa9b1848850d3e.js"
+    ],
+    "/_error": [
+      "static/chunks/673bd40c72e1aea0.js",
+      "static/chunks/5bf7f405c8f6b1b8.js",
+      "static/chunks/turbopack-3d177968face2393.js"
+    ]
   },
   "devFiles": [],
   "ampDevFiles": [],
   "polyfillFiles": [
-    "static/chunks/0d011_next_dist_build_polyfills_polyfill-nomodule.js"
+    "static/chunks/a6dad97d9634a72d.js"
   ],
   "lowPriorityFiles": [],
   "rootMainFiles": [
-    "static/chunks/[turbopack]_browser_dev_hmr-client_hmr-client_ts_7e3f608e._.js",
-    "static/chunks/0d011_next_dist_compiled_react-dom_ef9959d9._.js",
-    "static/chunks/0d011_next_dist_compiled_next-devtools_index_36693783.js",
-    "static/chunks/0d011_next_dist_compiled_5df2c42a._.js",
-    "static/chunks/0d011_next_dist_client_00bb9d8d._.js",
-    "static/chunks/0d011_next_dist_6961435c._.js",
-    "static/chunks/0d011_@swc_helpers_cjs_5f803e89._.js",
-    "static/chunks/consulting_sonarium-ai_a0ff3932._.js",
-    "static/chunks/turbopack-consulting_sonarium-ai_f90d7713._.js"
+    "static/chunks/930a98fe2660832a.js",
+    "static/chunks/b7bd6c20bc04cdf9.js",
+    "static/chunks/30f5bca45c3feafd.js",
+    "static/chunks/8defd5d11d22ad35.js",
+    "static/chunks/turbopack-afa88ccb42a1f1a4.js"
   ],
   "ampFirstPages": []
 };
